@@ -1,0 +1,36 @@
+@media (min-width: 768px) {
+    section.spot .list{
+        display: flex;
+        margin-left: 45px;
+        margin-right: 45px;
+        gap: 30px;
+    }
+    section.spot .list .spot-card{
+        width: 25%
+    }
+    section.spot .list .spot-card figure {
+        width: 100%
+    }
+    section.spot .list .spot-card figure .img-wrap {
+        width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 10px;
+    }
+    section.spot .list .spot-card figure .img-wrap img{
+        width: 100%
+    }
+    section.spot .list .spot-card figure figcaption.name{
+        font-size: 22px;
+        font-weight: 700;
+        color: #2f2f2f;
+        margin-bottom: 6px;
+    }
+    section.spot .list .spot-card figure figcaption.location{
+        font-size: 16px;
+        color: $gray
+    }
+    section.spot .list .spot-card figure figcaption.location img{
+        margin-right: 4px;
+    }
+  }
