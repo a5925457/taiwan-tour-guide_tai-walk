@@ -1,4 +1,4 @@
-section.spot {
+section.res {
     margin-top: 24px;
     margin-bottom: 18px;
     .top {
@@ -28,8 +28,9 @@ section.spot {
 }
 
 @media (min-width: 1200px) {
-    section.spot {
+    section.res {
         margin-top: 36px;
+        margin-bottom: 120px;
         .top {
             margin-bottom: 12px;
             h4 {

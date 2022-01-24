@@ -1,50 +1,50 @@
 @media (min-width: 768px) {
-    section.spot .list{
+    section.res .list{
         display: flex;
         margin-left: 45px;
         margin-right: 45px;
         gap: 30px;
     }
-    section.spot .list .spot-card{
+    section.res .list .res-card{
         width: 25%
     }
-    section.spot .list .spot-card:hover figure .img-wrap img{
+    section.res .list .res-card:hover figure .img-wrap img{
         transform: scale(1.1);
     }
-    section.spot .list .spot-card figure {
+    section.res .list .res-card figure {
         width: 100%
         
     }
-    section.spot .list .spot-card figure .img-wrap {
+    section.res .list .res-card figure .img-wrap {
         width: 100%;
         border-radius: 20px;
         overflow: hidden;
         margin-bottom: 10px;
         height: 150px;
     }
-    section.spot .list .spot-card figure .img-wrap img{
+    section.res .list .res-card figure .img-wrap img{
         width: 100%;
         height: 100%;
         object-fit: cover;
         transition: .5s;
     }
-    section.spot .list .spot-card figure figcaption.name{
+    section.res .list .res-card figure figcaption.name{
         font-size: 22px;
         font-weight: 700;
         color: #2f2f2f;
         margin-bottom: 6px;
     }
-    section.spot .list .spot-card figure figcaption.location{
+    section.res .list .res-card figure figcaption.location{
         font-size: 16px;
         color: $gray
     }
-    section.spot .list .spot-card figure figcaption.location img{
+    section.res .list .res-card figure figcaption.location img{
         margin-right: 4px;
     }
   }
 
   @media (min-width: 1200px) {
-  section.spot .list .spot-card figure .img-wrap {
+    section.res .list .res-card figure .img-wrap {
     height: 200px;
     }
   }

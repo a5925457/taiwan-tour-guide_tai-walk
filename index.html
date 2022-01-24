@@ -13,7 +13,7 @@
         />
         <!-- Link Swiper's CSS -->
         <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="./styles/styles.css" />
+        <link rel="stylesheet" href="./styles/index.css" />
     </head>
     <body>
         <header>
@@ -38,9 +38,9 @@
                 <div class="search">
                     <form action="">
                         <select name="" id="">
-                            <option value="">探索景點</option>
-                            <option value="">探索景點</option>
-                            <option value="">探索景點</option>
+                            <option value="spot">探索景點</option>
+                            <option value="event">節慶活動</option>
+                            <option value="res">品嚐美食</option>
                         </select>
                         <input type="text" name="" id="" placeholder="你想去哪裡？請輸入關鍵字" />
                         <button type="submit" class="flex-center"><img src="./images/icon/search30.svg" />搜尋</button>
@@ -84,9 +84,6 @@
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
-                    <!-- Add Navigation -->
-                    <!-- <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div> -->
                 </div>
             </section>
             <section class="event">
@@ -221,31 +218,105 @@
                     </div>
                 </div>
             </section>
+
+            <section class="res">
+                <div class="top">
+                    <h4>一再回訪美食</h4>
+                    <a href="#">查看更多美食<img src="./images/icon/arrow-right16_R.svg" /></a>
+                </div>
+                <div class="slider-res mobile">
+                    <!-- Swiper -->
+            <div class="swiper swiper3">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                      <figure>
+                          <img src="./images/z_11003139.png" alt="">
+                          <figcaption class="name">龜山島牛奶海</figcaption>
+                          <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
+                      </figure>
+                  </div>
+                  <div class="swiper-slide">
+                      <figure>
+                          <img src="./images/z_11003139.png" alt="">
+                          <figcaption class="name">龜山島牛奶海</figcaption>
+                          <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
+                      </figure>
+                  </div>
+                  <div class="swiper-slide">
+                      <figure>
+                          <img src="./images/z_11003139.png" alt="">
+                          <figcaption class="name">龜山島牛奶海</figcaption>
+                          <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
+                      </figure>
+                  </div>
+                  <div class="swiper-slide">
+                      <figure>
+                          <img src="./images/z_11003139.png" alt="">
+                          <figcaption class="name">龜山島牛奶海</figcaption>
+                          <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
+                      </figure>
+                  </div>
+                </div>
+              </div>
+                </div>
+                <div class="list hidden">
+                    <div class="res-card">
+                        <figure>
+                            <div class="img-wrap"><img src="./images/z_11003139.png" alt=""></div>
+                            <figcaption class="name">龜山島牛奶海</figcaption>
+                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
+                        </figure>
+                    </div>
+                    <div class="res-card">
+                        <figure>
+                            <div class="img-wrap"><img src="./images/z_11003139.png" alt=""></div>
+                            <figcaption class="name">龜山島牛奶海</figcaption>
+                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
+                        </figure>
+                    </div>
+                    <div class="res-card">
+                        <figure>
+                            <div class="img-wrap"><img src="./images/z_11003139.png" alt=""></div>
+                            <figcaption class="name">龜山島牛奶海</figcaption>
+                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
+                        </figure>
+                    </div>
+                    <div class="res-card">
+                        <figure>
+                            <div class="img-wrap"><img src="./images/z_11003139.png" alt=""></div>
+                            <figcaption class="name">龜山島牛奶海</figcaption>
+                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
         </main>
-        <footer></footer>
+        <footer>
+            <p class="text-center">
+                Taiwan Tour Guide &copy; Code: Mary / Designer: Breakfast
+            </p>
+        </footer>
+        
+        <div class="moblie-menu">
+            <div class="bg">
+                <nav>
+                    <img class="logo mobile" src="./images/icon/Logo-mobile.svg" />
+                    <button><img src="./images/icon/cross.svg" /></button>
+                    <ul>
+                        <li><a href="#">探索景點</a></li>
+                        <li><a href="#">節慶活動</a></li>
+                        <li><a href="#">品嚐美食</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
         <!-- Swiper JS -->
         <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-        <script>
-            // Init Swiper
-            var swiper = new Swiper('.bigSwiper', {
-                // Install Plugin To Swiper
-                pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
-                },
-                // autoplay
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                // Enable debugger
-                debugger: true,
-            });
-
-            var swiper2 = new Swiper(".swiper2", {
-        slidesPerView: "auto",
-        spaceBetween: 30
-      });
-        </script>
+        <!-- bigSwiper JS -->
+        <script src="./js/bigSwiper.js"></script>
+        <!-- swiper2 JS -->
+        <script src="./js/swiper2.js"></script>
+        <!-- swiper3 JS -->
+        <script src="./js/swiper3.js"></script>
     </body>
 </html>

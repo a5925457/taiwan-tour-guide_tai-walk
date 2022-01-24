@@ -342,6 +342,11 @@ section.slider .swiper-pagination-bullet-active {
   background-color: white;
 }
 
+section.slider .bigSwiper .swiper-pagination {
+  text-align: right;
+  padding-right: 12px;
+}
+
 @media (min-width: 768px) {
   section.slider .swiper-slide figure figcaption {
     -webkit-transform: translate(-50%, -60px);
@@ -368,6 +373,12 @@ section.slider .swiper-pagination-bullet-active {
   section.slider .swiper-slide figure figcaption {
     -webkit-transform: translate(-50%, -150px);
             transform: translate(-50%, -150px);
+  }
+}
+
+@media (min-width: 1200px) {
+  section.slider .bigSwiper .swiper-pagination {
+    padding-right: 42px;
   }
 }
 
@@ -573,6 +584,7 @@ section.event .event-card .text-wrap .location {
 
 section.spot {
   margin-top: 24px;
+  margin-bottom: 18px;
 }
 
 section.spot .top {
@@ -723,6 +735,10 @@ section.spot .top a:link, section.spot .top a:visited {
   section.spot .list .spot-card {
     width: 25%;
   }
+  section.spot .list .spot-card:hover figure .img-wrap img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
   section.spot .list .spot-card figure {
     width: 100%;
   }
@@ -731,9 +747,15 @@ section.spot .top a:link, section.spot .top a:visited {
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 10px;
+    height: 150px;
   }
   section.spot .list .spot-card figure .img-wrap img {
     width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: .5s;
+    transition: .5s;
   }
   section.spot .list .spot-card figure figcaption.name {
     font-size: 22px;
@@ -749,4 +771,256 @@ section.spot .top a:link, section.spot .top a:visited {
     margin-right: 4px;
   }
 }
-/*# sourceMappingURL=styles.css.map */
+
+@media (min-width: 1200px) {
+  section.spot .list .spot-card figure .img-wrap {
+    height: 200px;
+  }
+}
+
+section.res {
+  margin-top: 24px;
+  margin-bottom: 18px;
+}
+
+section.res .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+section.res .top h4 {
+  margin-left: 21px;
+  font-weight: 300;
+  font-size: 24px;
+}
+
+section.res .top a {
+  margin-left: auto;
+  margin-right: 21px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+section.res .top a:link, section.res .top a:visited {
+  color: #ff725e;
+}
+
+@media (min-width: 1200px) {
+  section.res {
+    margin-top: 36px;
+    margin-bottom: 120px;
+  }
+  section.res .top {
+    margin-bottom: 12px;
+  }
+  section.res .top h4 {
+    margin-left: 60px;
+    font-size: 36px;
+  }
+  section.res .top a {
+    margin-right: 66px;
+    line-height: 36px;
+  }
+}
+
+.slider-res .swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-res .swiper-slide:nth-child(4) {
+  margin-right: 15px;
+}
+
+.slider-res .swiper-slide {
+  margin-left: 15px;
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.slider-res .swiper-slide figure {
+  position: relative;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slider-res .swiper-slide figure img {
+  width: 100%;
+  height: 160px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+
+.slider-res .swiper-slide figure figcaption {
+  text-align: left;
+}
+
+.slider-res .swiper-slide figure figcaption.name {
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  margin-bottom: 8px;
+  color: #2f2f2f;
+}
+
+.slider-res .swiper-slide figure figcaption.location {
+  font-size: 16px;
+  line-height: 16px;
+  color: #646464;
+}
+
+.slider-res .swiper-slide figure figcaption img {
+  width: 14px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.slider-res .swiper-slide {
+  width: 70%;
+}
+
+.slider-res {
+  height: 230px;
+}
+
+@media (min-width: 768px) {
+  .slider-res.mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  section.res .list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 45px;
+    margin-right: 45px;
+    gap: 30px;
+  }
+  section.res .list .res-card {
+    width: 25%;
+  }
+  section.res .list .res-card:hover figure .img-wrap img {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  section.res .list .res-card figure {
+    width: 100%;
+  }
+  section.res .list .res-card figure .img-wrap {
+    width: 100%;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    height: 150px;
+  }
+  section.res .list .res-card figure .img-wrap img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  section.res .list .res-card figure figcaption.name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #2f2f2f;
+    margin-bottom: 6px;
+  }
+  section.res .list .res-card figure figcaption.location {
+    font-size: 16px;
+    color: #646464;
+  }
+  section.res .list .res-card figure figcaption.location img {
+    margin-right: 4px;
+  }
+}
+
+@media (min-width: 1200px) {
+  section.res .list .res-card figure .img-wrap {
+    height: 200px;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 60px;
+  background: #65895F;
+}
+
+footer p {
+  color: #fff;
+  line-height: 60px;
+  font-size: 14px;
+}
+
+.moblie-menu {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 100vh;
+}
+
+.moblie-menu .bg {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+}
+
+.moblie-menu .bg nav {
+  position: absolute;
+  right: 0;
+  width: 276px;
+  background-color: white;
+}
+
+.moblie-menu .bg nav img {
+  margin-left: 0;
+}
+
+.moblie-menu .bg nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=index.css.map */
