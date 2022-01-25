@@ -115,25 +115,36 @@
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
     .banner {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        margin-top: 82px;
+        margin-top: 120px;
         margin-bottom: 57px;
+        .text {
+            h2 {
+                text-align: left;
+            }
+            p {
+                justify-content: flex-start;
+            }
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .banner {
         .text {
             margin-top: 6px;
             margin-bottom: 35px;
             h2 {
                 font-size: 48px;
                 line-height: 70px;
-                text-align: left;
                 margin-bottom: 17px;
             }
             p {
                 font-size: 20px;
-                justify-content: flex-start;
                 line-height: 30px;
                 span {
                     font-size: 18px;

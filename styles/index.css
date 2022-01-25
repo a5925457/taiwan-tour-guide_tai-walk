@@ -271,7 +271,7 @@ header button:hover {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 768px) {
   .banner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -282,9 +282,20 @@ header button:hover {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-top: 82px;
+    margin-top: 120px;
     margin-bottom: 57px;
   }
+  .banner .text h2 {
+    text-align: left;
+  }
+  .banner .text p {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1200px) {
   .banner .text {
     margin-top: 6px;
     margin-bottom: 35px;
@@ -292,14 +303,10 @@ header button:hover {
   .banner .text h2 {
     font-size: 48px;
     line-height: 70px;
-    text-align: left;
     margin-bottom: 17px;
   }
   .banner .text p {
     font-size: 20px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
     line-height: 30px;
   }
   .banner .text p span {
