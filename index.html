@@ -86,7 +86,7 @@
                     <div class="swiper-pagination"></div>
                 </div>
             </section>
-            <section class="event">
+            <section class="event container">
                 <div class="top">
                     <h4>近期活動</h4>
                     <a href="#">查看更多活動<img src="./images/icon/arrow-right16_R.svg" /></a>
@@ -147,7 +147,7 @@
                     </a>
                 </div>
             </section>
-            <section class="spot">
+            <section class="spot container">
                 <div class="top">
                     <h4>熱門打卡景點</h4>
                     <a href="#">查看更多景點<img src="./images/icon/arrow-right16_R.svg" /></a>
@@ -227,7 +227,7 @@
                 </div>
             </section>
 
-            <section class="res">
+            <section class="res container">
                 <div class="top">
                     <h4>一再回訪美食</h4>
                     <a href="#">查看更多美食<img src="./images/icon/arrow-right16_R.svg" /></a>
@@ -311,6 +311,7 @@
             <p class="text-center">Taiwan Tour Guide &copy; Code: Mary / Designer: Breakfast</p>
         </footer>
 
+        <!-- moblie-menu -->
         <div class="moblie-menu hidden">
             <div class="bg">
                 <nav>
@@ -333,22 +334,7 @@
         <script src="./js/swiper2.js"></script>
         <!-- swiper3 JS -->
         <script src="./js/swiper3.js"></script>
-
-        <script>
-            const menuButton = document.querySelector('#menu-toggle');
-            const moblieMenu = document.querySelector('.moblie-menu');
-            let isOpen = false;
-            menuButton.addEventListener('click', () => {
-                if (!isOpen) {
-                    moblieMenu.classList.remove('hidden');
-                    menuButton.querySelector('img').setAttribute('src', './images/icon/cross.svg');
-                    isOpen = true;
-                } else {
-                    moblieMenu.classList.add('hidden');
-                    menuButton.querySelector('img').setAttribute('src', './images/icon/hamburger.svg');
-                    isOpen = false;
-                }
-            });
-        </script>
+        <!-- menu JS -->
+        <script src="./js/menu.js"></script>
     </body>
 </html>
