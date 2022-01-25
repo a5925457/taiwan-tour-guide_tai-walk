@@ -1,25 +1,31 @@
 nav {
     display: flex;
-    padding-top: 7px;
-    padding-bottom: 7px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     justify-content: center;
     h1 {
         display: none;
     }
-    .logo {
-        margin-left: auto;
-        transform: translateX(25px);
-    }
+}
+
+header {
+    position: relative;
     button {
-        margin-right: 8px;
-        margin-left: auto;
-        justify-self: end;
+        z-index: 999;
+        position: fixed;
+        right: 8px;
+        top: 8px;
         background-color: $lightGreen;
         border-radius: 12px;
         border: none;
         width: 50px;
         height: 50px;
+        transition: 0.1s;
+        cursor: pointer;
         @include center();
+        &:hover {
+            background-color: $hover;
+        }
     }
 }
 
@@ -42,16 +48,12 @@ nav {
             display: block;
         }
         .logo.desktop.hidden {
-            margin: 0;
-        }
-
-        button {
-            display: none;
+            margin-left: 45px;
         }
         ul.desktop {
             display: flex;
             flex-direction: row;
-            margin-right: 10px;
+            margin-right: 45px;
             li {
                 a:link,
                 a:visited {
@@ -60,5 +62,8 @@ nav {
                 }
             }
         }
+    }
+    button#menu-toggle {
+        display: none;
     }
 }

@@ -1,4 +1,5 @@
 $themeColor: #7f977b;
+$hover: #65895f;
 $lightGreen: #a8b8a5;
 $dark: #1e1e1e;
 $gray: #646464;
@@ -37,8 +38,6 @@ body {
     text-align: center;
 }
 
-
-
 @import './nav';
 
 @import './banner';
@@ -61,4 +60,4 @@ body {
 
 @import './footer';
 
-@import './moblie-menu'
+@import './moblie-menu';

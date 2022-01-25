@@ -1,5 +1,14 @@
+@keyframes move {
+    from {
+        transform: translateX(276px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
 .moblie-menu {
-    z-index: 999;
+    z-index: 800;
     position: fixed;
     width: 100%;
     top: 0;
@@ -9,7 +18,8 @@
         height: 100vh;
         background: rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(4px);
-        nav{
+        nav {
+            animation: move 0.2s;
             position: absolute;
             display: flex;
             flex-direction: column;
@@ -17,10 +27,13 @@
             width: 276px;
             background-color: white;
             border-bottom-left-radius: 30px;
+            padding-top: 0px;
             .top {
                 display: flex;
-                img {
-                    margin-left: 0;
+                padding-top: 17px;
+                padding-bottom: 17px;
+                img.logo {
+                    margin-left: 30px;
                 }
             }
 
@@ -34,7 +47,8 @@
                     a {
                         padding: 24px 89px;
                     }
-                    a:link,a:visited {
+                    a:link,
+                    a:visited {
                         color: $gray;
                     }
                     &:nth-child(1) {
@@ -50,5 +64,11 @@
                 }
             }
         }
+    }
+}
+
+@media (min-width: 768px) {
+    .moblie-menu {
+        display: none;
     }
 }

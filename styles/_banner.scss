@@ -77,7 +77,12 @@
                 width: 345px;
                 font-weight: bold;
                 letter-spacing: 1rem;
+                transition: 0.1s;
+                cursor: pointer;
                 @include center();
+                &:hover {
+                    background-color: $hover;
+                }
                 img {
                     margin-right: 1rem;
                 }

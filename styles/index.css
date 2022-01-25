@@ -27,8 +27,8 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 7px;
-  padding-bottom: 7px;
+  padding-top: 17px;
+  padding-bottom: 17px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -38,21 +38,23 @@ nav h1 {
   display: none;
 }
 
-nav .logo {
-  margin-left: auto;
-  -webkit-transform: translateX(25px);
-          transform: translateX(25px);
+header {
+  position: relative;
 }
 
-nav button {
-  margin-right: 8px;
-  margin-left: auto;
-  justify-self: end;
+header button {
+  z-index: 999;
+  position: fixed;
+  right: 8px;
+  top: 8px;
   background-color: #a8b8a5;
   border-radius: 12px;
   border: none;
   width: 50px;
   height: 50px;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,6 +64,10 @@ nav button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+header button:hover {
+  background-color: #65895f;
 }
 
 @media (min-width: 768px) {
@@ -88,10 +94,7 @@ nav button {
     display: block;
   }
   nav .logo.desktop.hidden {
-    margin: 0;
-  }
-  nav button {
-    display: none;
+    margin-left: 45px;
   }
   nav ul.desktop {
     display: -webkit-box;
@@ -101,12 +104,15 @@ nav button {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    margin-right: 10px;
+    margin-right: 45px;
   }
   nav ul.desktop li a:link,
   nav ul.desktop li a:visited {
     color: #646464;
     padding: 0 10px;
+  }
+  button#menu-toggle {
+    display: none;
   }
 }
 
@@ -218,6 +224,9 @@ nav button {
   width: 345px;
   font-weight: bold;
   letter-spacing: 1rem;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -227,6 +236,10 @@ nav button {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.banner .search form button:hover {
+  background-color: #65895f;
 }
 
 .banner .search form button img {
@@ -992,8 +1005,30 @@ footer p {
   font-size: 14px;
 }
 
+@-webkit-keyframes move {
+  from {
+    -webkit-transform: translateX(276px);
+            transform: translateX(276px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes move {
+  from {
+    -webkit-transform: translateX(276px);
+            transform: translateX(276px);
+  }
+  to {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
 .moblie-menu {
-  z-index: 999;
+  z-index: 800;
   position: fixed;
   width: 100%;
   top: 0;
@@ -1009,6 +1044,8 @@ footer p {
 }
 
 .moblie-menu .bg nav {
+  -webkit-animation: move 0.2s;
+          animation: move 0.2s;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1021,16 +1058,19 @@ footer p {
   width: 276px;
   background-color: white;
   border-bottom-left-radius: 30px;
+  padding-top: 0px;
 }
 
 .moblie-menu .bg nav .top {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 17px;
+  padding-bottom: 17px;
 }
 
-.moblie-menu .bg nav .top img {
-  margin-left: 0;
+.moblie-menu .bg nav .top img.logo {
+  margin-left: 30px;
 }
 
 .moblie-menu .bg nav ul {
@@ -1053,7 +1093,8 @@ footer p {
   padding: 24px 89px;
 }
 
-.moblie-menu .bg nav ul li a:link, .moblie-menu .bg nav ul li a:visited {
+.moblie-menu .bg nav ul li a:link,
+.moblie-menu .bg nav ul li a:visited {
   color: #646464;
 }
 
@@ -1067,5 +1108,11 @@ footer p {
   margin-left: 8px;
   margin-right: 8px;
   border-bottom: 1px solid #e6e6e6;
+}
+
+@media (min-width: 768px) {
+  .moblie-menu {
+    display: none;
+  }
 }
 /*# sourceMappingURL=index.css.map */
