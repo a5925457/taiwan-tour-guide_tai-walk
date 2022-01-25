@@ -11,15 +11,43 @@
         backdrop-filter: blur(4px);
         nav{
             position: absolute;
+            display: flex;
+            flex-direction: column;
             right: 0;
             width: 276px;
             background-color: white;
-            img {
-                margin-left: 0;
+            border-bottom-left-radius: 30px;
+            .top {
+                display: flex;
+                img {
+                    margin-left: 0;
+                }
             }
+
             ul {
                 display: flex;
                 flex-direction: column;
+                li {
+                    height: 77px;
+                    line-height: 77px;
+                    text-align: center;
+                    a {
+                        padding: 24px 89px;
+                    }
+                    a:link,a:visited {
+                        color: $gray;
+                    }
+                    &:nth-child(1) {
+                        margin-left: 8px;
+                        margin-right: 8px;
+                        border-bottom: 1px solid $border;
+                    }
+                    &:nth-child(2) {
+                        margin-left: 8px;
+                        margin-right: 8px;
+                        border-bottom: 1px solid $border;
+                    }
+                }
             }
         }
     }

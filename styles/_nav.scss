@@ -25,6 +25,11 @@ nav {
 
 @media (min-width: 768px) {
     nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: $white;
+        z-index: 800;
         align-items: center;
         justify-content: space-between;
         padding-top: 17px;

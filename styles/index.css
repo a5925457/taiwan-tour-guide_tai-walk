@@ -66,6 +66,11 @@ nav button {
 
 @media (min-width: 768px) {
   nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 800;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -1005,12 +1010,26 @@ footer p {
 
 .moblie-menu .bg nav {
   position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   right: 0;
   width: 276px;
   background-color: white;
+  border-bottom-left-radius: 30px;
 }
 
-.moblie-menu .bg nav img {
+.moblie-menu .bg nav .top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.moblie-menu .bg nav .top img {
   margin-left: 0;
 }
 
@@ -1022,5 +1041,31 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+.moblie-menu .bg nav ul li {
+  height: 77px;
+  line-height: 77px;
+  text-align: center;
+}
+
+.moblie-menu .bg nav ul li a {
+  padding: 24px 89px;
+}
+
+.moblie-menu .bg nav ul li a:link, .moblie-menu .bg nav ul li a:visited {
+  color: #646464;
+}
+
+.moblie-menu .bg nav ul li:nth-child(1) {
+  margin-left: 8px;
+  margin-right: 8px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.moblie-menu .bg nav ul li:nth-child(2) {
+  margin-left: 8px;
+  margin-right: 8px;
+  border-bottom: 1px solid #e6e6e6;
 }
 /*# sourceMappingURL=index.css.map */
