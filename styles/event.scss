@@ -45,28 +45,21 @@ body {
     text-align: center;
 }
 
+h4 {
+    color: $dark;
+}
+
 @import './nav';
 
 @import './breadcrumb';
 
 @import './event_banner';
 
-@import './event';
-
-@import './spot';
-
-@import './slider_spot';
-
-@import './spot_card';
-
-@import './res';
-
-@import './slider_res';
-
-@import './res_card';
+@import './cat_list';
 
 @import './footer';
 
 @import './moblie-menu';
 
-
+// serach
+@import './search_list';

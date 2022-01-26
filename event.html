@@ -19,8 +19,8 @@
         <header>
             <nav>
                 <h1 class="hidden">台灣走走</h1>
-                <img class="logo mobile" src="./images/icon/Logo-mobile.svg" />
-                <img class="logo desktop hidden" src="./images/icon/Logo-desktop.svg" />
+                <a class="mobile" href="index.html"><img class="logo mobile" src="./images/icon/Logo-mobile.svg" /></a>
+                <a href="index.html"><img class="logo desktop hidden" src="./images/icon/Logo-desktop.svg" /></a>
                 <ul class="hidden desktop">
                     <li><a href="#">探索景點</a></li>
                     <li><a href="#">節慶活動</a></li>
@@ -31,244 +31,56 @@
         </header>
         <main>
             <!-- breadcrumb -->
-            <nav aria-label="breadcrumb" class="breadcrumb">
+            <nav aria-label="breadcrumb" class="breadcrumb container">
                 <ol>
-                  <li><a href="index.html">首頁</a></li>
-                  <li aria-current="page">節慶活動</li>
+                    <li><a href="index.html">首頁</a></li>
+                    <li aria-current="page">節慶活動</li>
                 </ol>
             </nav>
             <section class="banner">
                 <div class="search">
-                    <form action="">
+                    <form action="event_search.html" class="container">
                         <select name="" id="">
                             <option value="county">全部縣市</option>
                             <option value="taipei">台北市</option>
                             <option value="newTaipei">新北市</option>
                         </select>
-                        <input class="date" type="text" placeholder="選擇日期" onfocus="(this.type='date')"/>
+                        <input class="date" type="text" placeholder="選擇日期" onfocus="(this.type='date')" />
                         <input type="text" name="" id="" placeholder="想找有趣的？請輸入關鍵字" />
                         <button type="submit" class="flex-center"><img src="./images/icon/search30.svg" />搜尋</button>
                     </form>
                 </div>
             </section>
-            <section class="event container">
+            <section class="category container">
                 <div class="top">
-                    <h4>近期活動</h4>
-                    <a href="#">查看更多活動<img src="./images/icon/arrow-right16_R.svg" /></a>
+                    <h4>熱門主題</h4>
                 </div>
 
                 <div class="list">
-                    <a href="#" class="event-card">
-                        <div class="img-wrap">
-                            <img src="images/z_11003139.png" alt="" />
-                        </div>
-                        <div class="text-wrap">
-                            <p class="time">2021/10/30 - 2021/11/13</p>
-                            <p class="name">2021 日月潭花火音樂嘉年華</p>
-                            <div>
-                                <p class="location"><img class="hidden" src="./images/icon/spot16.svg" />南投縣</p>
-                                <p class="hidden detail">詳細介紹<img src="./images/icon/arrow-right16_G.svg" /></p>
-                            </div>
-                        </div>
+                    <a class="cat" href="#">
+                        <img src="./images/event_cat1.jpg" alt="" />
+                        <p>節慶活動</p>
                     </a>
-                    <a href="#" class="event-card">
-                        <div class="img-wrap">
-                            <img src="images/z_11003139.png" alt="" />
-                        </div>
-                        <div class="text-wrap">
-                            <p class="time">2021/10/30 - 2021/11/13</p>
-                            <p class="name">2021 日月潭花火音樂嘉年華</p>
-                            <div>
-                                <p class="location"><img class="hidden" src="./images/icon/spot16.svg" />南投縣</p>
-                                <p class="hidden detail">詳細介紹<img src="./images/icon/arrow-right16_G.svg" /></p>
-                            </div>
-                        </div>
+                    <a class="cat" href="#">
+                        <img src="./images/event_cat2.jpg" alt="" />
+                        <p>自行車活動</p>
                     </a>
-                    <a href="#" class="event-card">
-                        <div class="img-wrap">
-                            <img src="images/z_11003139.png" alt="" />
-                        </div>
-                        <div class="text-wrap">
-                            <p class="time">2021/10/30 - 2021/11/13</p>
-                            <p class="name">2021 日月潭花火音樂嘉年華</p>
-                            <div>
-                                <p class="location"><img class="hidden" src="./images/icon/spot16.svg" />南投縣</p>
-                                <p class="hidden detail">詳細介紹<img src="./images/icon/arrow-right16_G.svg" /></p>
-                            </div>
-                        </div>
+                    <a class="cat" href="#">
+                        <img src="./images/event_cat3.jpg" alt="" />
+                        <p>遊憩活動</p>
                     </a>
-                    <a href="#" class="event-card">
-                        <div class="img-wrap">
-                            <img src="images/z_11003139.png" alt="" />
-                        </div>
-                        <div class="text-wrap">
-                            <p class="time">2021/10/30 - 2021/11/13</p>
-                            <p class="name">2021 日月潭花火音樂嘉年華</p>
-                            <div>
-                                <p class="location"><img class="hidden" src="./images/icon/spot16.svg" />南投縣</p>
-                                <p class="hidden detail">詳細介紹<img src="./images/icon/arrow-right16_G.svg" /></p>
-                            </div>
-                        </div>
+                    <a class="cat" href="#">
+                        <img src="./images/event_cat4.jpg" alt="" />
+                        <p>產業文化活動</p>
                     </a>
-                </div>
-            </section>
-            <section class="spot container">
-                <div class="top">
-                    <h4>熱門打卡景點</h4>
-                    <a href="#">查看更多景點<img src="./images/icon/arrow-right16_R.svg" /></a>
-                </div>
-                <div class="slider-spot mobile">
-                    <!-- Swiper -->
-                    <div class="swiper swiper2">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img src="./images/z_11003139.png" alt="" />
-                                    <figcaption class="name">龜山島牛奶海</figcaption>
-                                    <figcaption class="location">
-                                        <img src="./images/icon/spot16.svg" />宜蘭縣
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img src="./images/z_11003139.png" alt="" />
-                                    <figcaption class="name">龜山島牛奶海</figcaption>
-                                    <figcaption class="location">
-                                        <img src="./images/icon/spot16.svg" />宜蘭縣
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img src="./images/z_11003139.png" alt="" />
-                                    <figcaption class="name">龜山島牛奶海</figcaption>
-                                    <figcaption class="location">
-                                        <img src="./images/icon/spot16.svg" />宜蘭縣
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img src="./images/z_11003139.png" alt="" />
-                                    <figcaption class="name">龜山島牛奶海</figcaption>
-                                    <figcaption class="location">
-                                        <img src="./images/icon/spot16.svg" />宜蘭縣
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="list hidden">
-                    <div class="spot-card">
-                        <figure>
-                            <div class="img-wrap"><img src="./images/z_11003139.png" alt="" /></div>
-                            <figcaption class="name">龜山島牛奶海</figcaption>
-                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
-                        </figure>
-                    </div>
-                    <div class="spot-card">
-                        <figure>
-                            <div class="img-wrap"><img src="./images/z_11003139.png" alt="" /></div>
-                            <figcaption class="name">龜山島牛奶海</figcaption>
-                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
-                        </figure>
-                    </div>
-                    <div class="spot-card">
-                        <figure>
-                            <div class="img-wrap"><img src="./images/z_11003139.png" alt="" /></div>
-                            <figcaption class="name">龜山島牛奶海</figcaption>
-                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
-                        </figure>
-                    </div>
-                    <div class="spot-card">
-                        <figure>
-                            <div class="img-wrap"><img src="./images/z_11003139.png" alt="" /></div>
-                            <figcaption class="name">龜山島牛奶海</figcaption>
-                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
-                        </figure>
-                    </div>
-                </div>
-            </section>
-
-            <section class="res container">
-                <div class="top">
-                    <h4>一再回訪美食</h4>
-                    <a href="#">查看更多美食<img src="./images/icon/arrow-right16_R.svg" /></a>
-                </div>
-                <div class="slider-res mobile">
-                    <!-- Swiper -->
-                    <div class="swiper swiper3">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img src="./images/z_11003139.png" alt="" />
-                                    <figcaption class="name">龜山島牛奶海</figcaption>
-                                    <figcaption class="location">
-                                        <img src="./images/icon/spot16.svg" />宜蘭縣
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img src="./images/z_11003139.png" alt="" />
-                                    <figcaption class="name">龜山島牛奶海</figcaption>
-                                    <figcaption class="location">
-                                        <img src="./images/icon/spot16.svg" />宜蘭縣
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img src="./images/z_11003139.png" alt="" />
-                                    <figcaption class="name">龜山島牛奶海</figcaption>
-                                    <figcaption class="location">
-                                        <img src="./images/icon/spot16.svg" />宜蘭縣
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img src="./images/z_11003139.png" alt="" />
-                                    <figcaption class="name">龜山島牛奶海</figcaption>
-                                    <figcaption class="location">
-                                        <img src="./images/icon/spot16.svg" />宜蘭縣
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="list hidden">
-                    <div class="res-card">
-                        <figure>
-                            <div class="img-wrap"><img src="./images/z_11003139.png" alt="" /></div>
-                            <figcaption class="name">龜山島牛奶海</figcaption>
-                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
-                        </figure>
-                    </div>
-                    <div class="res-card">
-                        <figure>
-                            <div class="img-wrap"><img src="./images/z_11003139.png" alt="" /></div>
-                            <figcaption class="name">龜山島牛奶海</figcaption>
-                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
-                        </figure>
-                    </div>
-                    <div class="res-card">
-                        <figure>
-                            <div class="img-wrap"><img src="./images/z_11003139.png" alt="" /></div>
-                            <figcaption class="name">龜山島牛奶海</figcaption>
-                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
-                        </figure>
-                    </div>
-                    <div class="res-card">
-                        <figure>
-                            <div class="img-wrap"><img src="./images/z_11003139.png" alt="" /></div>
-                            <figcaption class="name">龜山島牛奶海</figcaption>
-                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
-                        </figure>
-                    </div>
+                    <a class="cat" href="#">
+                        <img src="./images/event_cat5.jpg" alt="" />
+                        <p>年度活動</p>
+                    </a>
+                    <a class="cat" href="#">
+                        <img src="./images/event_cat6.jpg" alt="" />
+                        <p>四季活動</p>
+                    </a>
                 </div>
             </section>
         </main>
@@ -285,7 +97,7 @@
                     </div>
                     <ul>
                         <li><a href="#">探索景點</a></li>
-                        <li><a href="#">節慶活動</a></li>
+                        <li><a href="event.html">節慶活動</a></li>
                         <li><a href="#">品嚐美食</a></li>
                     </ul>
                 </nav>

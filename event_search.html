@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>台灣走走 - 節慶活動</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Link Swiper's CSS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="./styles/event.css" />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <h1 class="hidden">台灣走走</h1>
+                <a class="mobile" href="index.html"><img class="logo mobile" src="./images/icon/Logo-mobile.svg" /></a>
+                <a href="index.html"><img class="logo desktop hidden" src="./images/icon/Logo-desktop.svg" /></a>
+                <ul class="hidden desktop">
+                    <li><a href="#">探索景點</a></li>
+                    <li><a href="#">節慶活動</a></li>
+                    <li><a href="#">品嚐美食</a></li>
+                </ul>
+            </nav>
+            <button id="menu-toggle"><img src="./images/icon/hamburger.svg" /></button>
+        </header>
+        <main>
+            <!-- breadcrumb -->
+            <nav aria-label="breadcrumb" class="breadcrumb container">
+                <ol>
+                    <li><a href="index.html">首頁</a></li>
+                    <li aria-current="page">節慶活動</li>
+                </ol>
+            </nav>
+            <section class="banner">
+                <div class="search">
+                    <form action="" class="container">
+                        <select name="" id="">
+                            <option value="county">全部縣市</option>
+                            <option value="taipei">台北市</option>
+                            <option value="newTaipei">新北市</option>
+                        </select>
+                        <input class="date" type="text" placeholder="選擇日期" onfocus="(this.type='date')" />
+                        <input type="text" name="" id="" placeholder="想找有趣的？請輸入關鍵字" />
+                        <button type="submit" class="flex-center"><img src="./images/icon/search30.svg" />搜尋</button>
+                    </form>
+                </div>
+            </section>
+            <section class="category container">
+                <div class="top">
+                    <h4>搜尋結果</h4>
+                    <p class="result">共有 <span>240</span> 筆</p>
+                </div>
+
+                <div class="search-list">
+                    <div class="result-event-card">
+                        <figure>
+                            <div class="img-wrap"><img src="./images/NoImage-345x160.svg" alt="" /></div>
+                            <figcaption class="name">景點名稱景點名稱景點名稱景點名稱景點名稱</figcaption>
+                            <figcaption class="location"><img src="./images/icon/spot16.svg" />景點城市</figcaption>
+                        </figure>
+                    </div>
+                    <div class="result-event-card">
+                        <figure>
+                            <div class="img-wrap"><img src="./images/NoImage-345x160.svg" alt="" /></div>
+                            <figcaption class="name">景點名稱景點名稱景點名稱景點名稱景點名稱</figcaption>
+                            <figcaption class="location"><img src="./images/icon/spot16.svg" />景點城市</figcaption>
+                        </figure>
+                    </div>
+                    <div class="result-event-card">
+                        <figure>
+                            <div class="img-wrap"><img src="./images/NoImage-345x160.svg" alt="" /></div>
+                            <figcaption class="name">景點名稱景點名稱景點名稱景點名稱景點名稱</figcaption>
+                            <figcaption class="location"><img src="./images/icon/spot16.svg" />景點城市</figcaption>
+                        </figure>
+                    </div>
+                    <div class="result-event-card">
+                        <figure>
+                            <div class="img-wrap"><img src="./images/NoImage-345x160.svg" alt="" /></div>
+                            <figcaption class="name">景點名稱景點名稱景點名稱景點名稱景點名稱</figcaption>
+                            <figcaption class="location"><img src="./images/icon/spot16.svg" />景點城市</figcaption>
+                        </figure>
+                    </div>
+                    <div class="result-event-card">
+                        <figure>
+                            <div class="img-wrap"><img src="./images/NoImage-345x160.svg" alt="" /></div>
+                            <figcaption class="name">景點名稱景點名稱景點名稱景點名稱景點名稱</figcaption>
+                            <figcaption class="location"><img src="./images/icon/spot16.svg" />景點城市</figcaption>
+                        </figure>
+                    </div>
+                    <div class="result-event-card">
+                        <figure>
+                            <div class="img-wrap"><img src="./images/NoImage-345x160.svg" alt="" /></div>
+                            <figcaption class="name">景點名稱景點名稱景點名稱景點名稱景點名稱</figcaption>
+                            <figcaption class="location"><img src="./images/icon/spot16.svg" />景點城市</figcaption>
+                        </figure>
+                    </div>
+                    <div class="result-event-card">
+                        <figure>
+                            <div class="img-wrap"><img src="./images/NoImage-345x160.svg" alt="" /></div>
+                            <figcaption class="name">景點名稱景點名稱景點名稱景點名稱景點名稱</figcaption>
+                            <figcaption class="location"><img src="./images/icon/spot16.svg" />景點城市</figcaption>
+                        </figure>
+                    </div>
+                    <div class="result-event-card">
+                        <figure>
+                            <div class="img-wrap"><img src="./images/NoImage-345x160.svg" alt="" /></div>
+                            <figcaption class="name">景點名稱景點名稱景點名稱景點名稱景點名稱</figcaption>
+                            <figcaption class="location"><img src="./images/icon/spot16.svg" />景點城市</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p class="text-center">Taiwan Tour Guide &copy; Code: Mary / Designer: Breakfast</p>
+        </footer>
+
+        <!-- moblie-menu -->
+        <div class="moblie-menu hidden">
+            <div class="bg">
+                <nav>
+                    <div class="top">
+                        <img class="logo mobile" src="./images/icon/Logo-mobile.svg" />
+                    </div>
+                    <ul>
+                        <li><a href="#">探索景點</a></li>
+                        <li><a href="event.html">節慶活動</a></li>
+                        <li><a href="#">品嚐美食</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+        <!-- bigSwiper JS -->
+        <script src="./js/bigSwiper.js"></script>
+        <!-- swiper2 JS -->
+        <script src="./js/swiper2.js"></script>
+        <!-- swiper3 JS -->
+        <script src="./js/swiper3.js"></script>
+        <!-- menu JS -->
+        <script src="./js/menu.js"></script>
+    </body>
+</html>
