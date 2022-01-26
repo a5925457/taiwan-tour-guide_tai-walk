@@ -1,0 +1,35 @@
+nav.breadcrumb {
+    margin-top: 0;
+    justify-content: flex-start;
+
+}
+
+nav.breadcrumb ol {
+    display: flex;
+    padding: 0;
+    font-size: 12px;
+    line-height: 21px;
+    color: $gray;
+    margin-left: 15px;
+    li a::after {
+        content: '/';
+        margin-left: 4px;
+        margin-right: 4px;
+    }
+    a:link,a:visited {
+        color: #6E7D60;
+    }
+}
+
+@media (min-width: 768px) {
+    nav.breadcrumb {
+        position: static;
+        border: none;
+        margin-top: 80px;
+        ol {
+            font-size: 16px;
+            line-height: 28px;
+            margin-left: 50px;
+        }
+    }
+}
