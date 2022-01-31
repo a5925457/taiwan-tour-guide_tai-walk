@@ -49,20 +49,30 @@ h4 {
     color: $dark;
 }
 
+footer {
+    margin-top: 72px;
+}
+
+@media (min-width: 1200px) {
+    footer {
+        margin-top: 120px;
+    }
+}
+
 @import './nav';
 
 @import './breadcrumb';
 
-@import './event_banner';
+@import './slider';
 
-@import './cat_list';
+@import './_content.scss';
+
+@import './spot';
+
+@import './slider_spot';
+
+@import './spot_card';
 
 @import './footer';
 
 @import './moblie-menu';
-
-// serach
-@import './search_list';
-
-// notfound
-@import './_search_nofound';

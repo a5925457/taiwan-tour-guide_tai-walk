@@ -1,0 +1,21 @@
+figure.nofound {
+    @include center();
+    margin: auto;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-bottom: 80px;
+    img {
+        margin-bottom: 16px;
+    }
+    p {
+        color: $themeColor;
+        font-weight: 700;
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    figure.nofound {
+        margin-top: 80px;
+    }
+}
