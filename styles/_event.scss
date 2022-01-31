@@ -83,6 +83,9 @@ section.event {
             margin-bottom: 12px;
             border-radius: 12px;
             border: 1px solid $border;
+            &:hover .img-wrap img {
+                transform: scale(1.1);
+            }
             .img-wrap {
                 width: 160px;
                 height: 160px;
@@ -97,9 +100,6 @@ section.event {
                 border-top-right-radius: 0;
                 border-bottom-right-radius: 0;
                 transition: 0.5s;
-                &:hover {
-                    transform: scale(1.1);
-                }
             }
             .text-wrap {
                 height: 160px;
