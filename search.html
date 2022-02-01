@@ -40,8 +40,8 @@
             <section class="banner">
                 <div class="search">
                     <form class="container" name="form1">
-                        <select name="city" id="">
-                            <option value="all">全部縣市</option>
+                        <select name="city" id="city">
+                            <option value="">全部縣市</option>
                             <option value="Taipei">臺北市</option>
                             <option value="NewTaipei">新北市</option>
                             <option value="Keelung">基隆市</option>
@@ -112,18 +112,39 @@
             let q = urlParams.get('q');
 
             let city = urlParams.get('city') ? urlParams.get('city') : '';
-            let date = urlParams.get('date') ? urlParams.get('date') : '';
+            let date = urlParams.get('date') ? new Date(urlParams.get('date')) : '';
             let nowPage = 1;
+
+            if (city) {
+                document.querySelector('#city').value = city;
+            }
 
             getData();
 
             async function getData() {
+                // query
+                const param = `%24filter=contains(ActivityName, '${q}')&`;
                 const res = await fetch(
-                    `https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity${
-                        city != '' ? '/' + city : ''
-                    }?%24filter=contains(ActivityName, '${q}')&%24format=JSON`
+                    `https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity${city != '' ? '/' + city : ''}?${
+                        q !== '' ? param : ''
+                    }%24format=JSON`
                 );
-                const data = await res.json();
+                let data = await res.json();
+
+                // check date
+                if (date && data.length != 0) {
+                    data = data
+                        .filter((item) => {
+                            let startDate = new Date(item.StartTime.slice(0, 10).toString());
+                            return startDate < date;
+                        })
+                        .filter((item) => {
+                            let endDate = new Date(item.EndTime.slice(0, 10).toString());
+                            return endDate > date;
+                        });
+                }
+
+                // total amount
                 document.querySelector('.result').querySelector('span').innerText = data.length;
                 if (data.length === 0) {
                     document.querySelector('.search-list').innerHTML = `
@@ -135,13 +156,15 @@
                         </p>
                     </figure>
                     `;
+                } else {
+                    // decide the data
+                    let nowData = data.slice(12 * (nowPage - 1), 12 * nowPage);
+                    render(nowData);
+                    nowPage++;
                 }
-
-                let nowData = data.slice(12 * (nowPage - 1), 12 * nowPage);
-                render(nowData);
-                nowPage++;
             }
 
+            // render
             function render(data) {
                 data.forEach((item) => {
                     document.querySelector('.search-list').innerHTML += `
@@ -160,6 +183,7 @@
                 });
             }
 
+            // get more data when scrolling
             window.addEventListener('scroll', () => {
                 const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
                 if (clientHeight + scrollTop >= scrollHeight - 5) {
