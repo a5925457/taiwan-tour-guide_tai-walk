@@ -22,9 +22,9 @@
                 <a class="mobile" href="index.html"><img class="logo mobile" src="./images/icon/Logo-mobile.svg" /></a>
                 <a href="index.html"><img class="logo desktop hidden" src="./images/icon/Logo-desktop.svg" /></a>
                 <ul class="hidden desktop">
-                    <li><a href="#">探索景點</a></li>
+                    <li><a href="spot.html">探索景點</a></li>
                     <li><a href="event.html">節慶活動</a></li>
-                    <li><a href="#">品嚐美食</a></li>
+                    <li><a href="res.html">品嚐美食</a></li>
                 </ul>
             </nav>
             <button id="menu-toggle"><img src="./images/icon/hamburger.svg" /></button>
@@ -36,13 +36,13 @@
                     <p><img src="./images/icon/spot24_Y.svg" />台灣旅遊景點導覽 <span>Taiwan Travel Guide</span></p>
                 </div>
                 <div class="search">
-                    <form action="">
-                        <select name="" id="">
+                    <form action="./search.html" name="form1">
+                        <select name="type" id="">
                             <option value="spot">探索景點</option>
                             <option value="event">節慶活動</option>
                             <option value="res">品嚐美食</option>
                         </select>
-                        <input type="text" name="" id="" placeholder="你想去哪裡？請輸入關鍵字" />
+                        <input type="text" name="q" id="" placeholder="你想去哪裡？請輸入關鍵字" />
                         <button type="submit" class="flex-center"><img src="./images/icon/search30.svg" />搜尋</button>
                     </form>
                 </div>
@@ -66,7 +66,7 @@
             <section class="spot container">
                 <div class="top">
                     <h4>熱門打卡景點</h4>
-                    <a href="#">查看更多景點<img src="./images/icon/arrow-right16_R.svg" /></a>
+                    <a href="spot.html">查看更多景點<img src="./images/icon/arrow-right16_R.svg" /></a>
                 </div>
                 <div class="slider-spot mobile">
                     <!-- Swiper -->
@@ -80,7 +80,7 @@
             <section class="res container">
                 <div class="top">
                     <h4>一再回訪美食</h4>
-                    <a href="#">查看更多美食<img src="./images/icon/arrow-right16_R.svg" /></a>
+                    <a href="res.html">查看更多美食<img src="./images/icon/arrow-right16_R.svg" /></a>
                 </div>
                 <div class="slider-res mobile">
                     <!-- Swiper -->
@@ -103,9 +103,9 @@
                         <img class="logo mobile" src="./images/icon/Logo-mobile.svg" />
                     </div>
                     <ul>
-                        <li><a href="#">探索景點</a></li>
+                        <li><a href="spot.html">探索景點</a></li>
                         <li><a href="event.html">節慶活動</a></li>
-                        <li><a href="#">品嚐美食</a></li>
+                        <li><a href="res.html">品嚐美食</a></li>
                     </ul>
                 </nav>
             </div>
@@ -201,7 +201,6 @@
             fetch('https://ptx.transportdata.tw/MOTC/v2/Tourism/Restaurant?%24top=4&%24format=JSON')
                 .then((res) => res.json())
                 .then((data) => {
-                    console.log(data);
                     data.forEach((item) => {
                         document.querySelector('.slider-res').querySelector('.swiper-wrapper').innerHTML += `
                         <a class="swiper-slide" href="#">

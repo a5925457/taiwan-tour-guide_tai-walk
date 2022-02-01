@@ -22,9 +22,9 @@
                 <a class="mobile" href="index.html"><img class="logo mobile" src="./images/icon/Logo-mobile.svg" /></a>
                 <a href="index.html"><img class="logo desktop hidden" src="./images/icon/Logo-desktop.svg" /></a>
                 <ul class="hidden desktop">
-                    <li><a href="spot.html">探索景點</a></li>
-                    <li><a href="event.html">節慶活動</a></li>
-                    <li><a href="res.html">品嚐美食</a></li>
+                    <li><a href="#">探索景點</a></li>
+                    <li><a href="#">節慶活動</a></li>
+                    <li><a href="#">品嚐美食</a></li>
                 </ul>
             </nav>
             <button id="menu-toggle"><img src="./images/icon/hamburger.svg" /></button>
@@ -39,7 +39,7 @@
             </nav>
             <section class="banner">
                 <div class="search">
-                    <form action="./search.html" class="container">
+                    <form class="container" name="form1">
                         <select name="city" id="">
                             <option value="all">全部縣市</option>
                             <option value="Taipei">臺北市</option>
@@ -65,44 +65,18 @@
                             <option value="KinmenCounty">金門縣</option>
                             <option value="LienchiangCounty">連江縣</option>
                         </select>
-                        <input class="date" type="text" placeholder="選擇日期" onfocus="(this.type='date')" />
-                        <input type="text" name="" id="" placeholder="想找有趣的？請輸入關鍵字" />
-                        <input type="text" name="type" style="display: none" value="event" />
+                        <input type="text" name="q" id="" placeholder="想找有趣的？請輸入關鍵字" />
                         <button type="submit" class="flex-center"><img src="./images/icon/search30.svg" />搜尋</button>
                     </form>
                 </div>
             </section>
             <section class="category container">
                 <div class="top">
-                    <h4>熱門主題</h4>
+                    <h4>搜尋結果</h4>
+                    <p class="result">共有 <span></span> 筆</p>
                 </div>
 
-                <div class="list">
-                    <a class="cat" href="#">
-                        <img src="./images/event_cat1.jpg" alt="" />
-                        <p>節慶活動</p>
-                    </a>
-                    <a class="cat" href="#">
-                        <img src="./images/event_cat2.jpg" alt="" />
-                        <p>自行車活動</p>
-                    </a>
-                    <a class="cat" href="#">
-                        <img src="./images/event_cat3.jpg" alt="" />
-                        <p>遊憩活動</p>
-                    </a>
-                    <a class="cat" href="#">
-                        <img src="./images/event_cat4.jpg" alt="" />
-                        <p>產業文化活動</p>
-                    </a>
-                    <a class="cat" href="#">
-                        <img src="./images/event_cat5.jpg" alt="" />
-                        <p>年度活動</p>
-                    </a>
-                    <a class="cat" href="#">
-                        <img src="./images/event_cat6.jpg" alt="" />
-                        <p>四季活動</p>
-                    </a>
-                </div>
+                <div class="search-list"></div>
             </section>
         </main>
         <footer>
@@ -117,13 +91,76 @@
                         <img class="logo mobile" src="./images/icon/Logo-mobile.svg" />
                     </div>
                     <ul>
-                        <li><a href="spot.html">探索景點</a></li>
+                        <li><a href="#">探索景點</a></li>
                         <li><a href="event.html">節慶活動</a></li>
-                        <li><a href="res.html">品嚐美食</a></li>
+                        <li><a href="#">品嚐美食</a></li>
                     </ul>
                 </nav>
             </div>
         </div>
+
+        <script>
+            // // query
+            // let urlParams = new URLSearchParams(window.location.search);
+            // let q = urlParams.get('q');
+
+            // let city = urlParams.get('city') ? urlParams.get('city') : '';
+            // let date = urlParams.get('date') ? urlParams.get('date') : '';
+            // let nowPage = 1;
+
+            // getData();
+
+            // async function getData() {
+            //     const res = await fetch(
+            //         `https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity${
+            //             city != '' ? '/' + city : ''
+            //         }?%24filter=contains(ActivityName, '${q}')&%24format=JSON`
+            //     );
+            //     const data = await res.json();
+            //     document.querySelector('.result').querySelector('span').innerText = data.length;
+            //     if (data.length === 0) {
+            //         document.querySelector('.search-list').innerHTML = `
+            //         <figure class="nofound">
+            //             <img src="./images/icon/nofound80.svg" alt="" />
+            //             <p class="text-center">
+            //                 目前查無資料<br />
+            //                 請重新搜尋
+            //             </p>
+            //         </figure>
+            //         `;
+            //     }
+
+            //     let nowData = data.slice(12 * (nowPage - 1), 12 * nowPage);
+            //     render(nowData);
+            //     nowPage++;
+            // }
+
+            // function render(data) {
+            //     data.forEach((item) => {
+            //         document.querySelector('.search-list').innerHTML += `
+            //         <a class="result-event-card" href="#">
+            //             <figure>
+            //                 <div class="img-wrap"><img src="${
+            //                     item.Picture.PictureUrl1 ? item.Picture.PictureUrl1 : './images/NoImage-345x160.svg'
+            //                 }" alt="${
+            //             item.Picture.PictureDescription1 ? item.Picture.PictureDescription1 : ''
+            //         }" /></div>
+            //                 <figcaption class="name">${item.ActivityName}</figcaption>
+            //                 <figcaption class="location"><img src="./images/icon/spot16.svg" />${item.City}</figcaption>
+            //             </figure>
+            //         </a>
+            //         `;
+            //     });
+            // }
+
+            // window.addEventListener('scroll', () => {
+            //     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+            //     if (clientHeight + scrollTop >= scrollHeight - 5) {
+            //         getData();
+            //     }
+            // });
+        </script>
+
         <!-- menu JS -->
         <script src="./js/menu.js"></script>
     </body>
