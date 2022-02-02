@@ -34,7 +34,7 @@
             <nav aria-label="breadcrumb" class="breadcrumb container">
                 <ol>
                     <li><a href="index.html">首頁</a></li>
-                    <li aria-current="page">節慶活動</li>
+                    <li aria-current="page" id="current">節慶活動</li>
                 </ol>
             </nav>
             <section class="banner">
@@ -58,7 +58,7 @@
                             <option value="Chiayi">嘉義市</option>
                             <option value="Tainan">臺南市</option>
                             <option value="Kaohsiung">高雄市</option>
-                            <option value="Pingtung">屏東縣</option>
+                            <option value="PingtungCounty">屏東縣</option>
                             <option value="HualienCounty">花蓮縣</option>
                             <option value="TaitungCounty">臺東縣</option>
                             <option value="PenghuCounty">澎湖縣</option>
@@ -72,7 +72,8 @@
                             placeholder="選擇日期"
                             onfocus="(this.type='date')"
                         />
-                        <input type="text" name="q" id="" placeholder="想找有趣的？請輸入關鍵字" />
+                        <input type="text" name="q" id="keyword" placeholder="想找有趣的？請輸入關鍵字" />
+                        <input type="text" name="type" style="display: none" value="event" id="type" />
                         <button type="submit" class="flex-center"><img src="./images/icon/search30.svg" />搜尋</button>
                     </form>
                 </div>
@@ -107,25 +108,59 @@
         </div>
 
         <script>
-            // query
+            // get query string
             let urlParams = new URLSearchParams(window.location.search);
             let q = urlParams.get('q');
-
+            let type = urlParams.get('type');
             let city = urlParams.get('city') ? urlParams.get('city') : '';
             let date = urlParams.get('date') ? new Date(urlParams.get('date')) : '';
+
             let nowPage = 1;
 
+            // decide the type of api
+            let apiType = '';
+            let searchName = '';
+
+            // change search bar & breadcrumb
+            switch (type) {
+                case 'spot':
+                    document.querySelector('.search').querySelector('.date').remove();
+                    document.querySelector('#keyword').placeholder = '你想去哪裡？請輸入關鍵字';
+                    document.querySelector('#type').value = 'spot';
+                    document.querySelector('#current').innerText = '探索景點';
+                    apiType = 'ScenicSpot';
+                    searchName = 'ScenicSpotName';
+                    break;
+                case 'res':
+                    document.querySelector('.search').querySelector('.date').remove();
+                    document.querySelector('#keyword').placeholder = '你想吃什麼？請輸入關鍵字';
+                    document.querySelector('#type').value = 'res';
+                    document.querySelector('#current').innerText = '品嚐美食';
+                    apiType = 'Restaurant';
+                    searchName = 'RestaurantName';
+                    break;
+                case 'event':
+                    apiType = 'Activity';
+                    searchName = 'ActivityName';
+                    break;
+                default:
+            }
+
+            // reserve the search data when refreshing page
             if (city) {
                 document.querySelector('#city').value = city;
+            }
+            if (q) {
+                document.querySelector('#keyword').value = q;
             }
 
             getData();
 
             async function getData() {
                 // query
-                const param = `%24filter=contains(ActivityName, '${q}')&`;
+                const param = `%24filter=contains(${searchName}, '${q}')&`;
                 const res = await fetch(
-                    `https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity${city != '' ? '/' + city : ''}?${
+                    `https://ptx.transportdata.tw/MOTC/v2/Tourism/${apiType}${city != '' ? '/' + city : ''}?${
                         q !== '' ? param : ''
                     }%24format=JSON`
                 );
@@ -175,7 +210,13 @@
                             }" alt="${
                         item.Picture.PictureDescription1 ? item.Picture.PictureDescription1 : ''
                     }" /></div>
-                            <figcaption class="name">${item.ActivityName}</figcaption>
+                            <figcaption class="name">${
+                                type == 'spot'
+                                    ? item.ScenicSpotName
+                                    : type == 'res'
+                                    ? item.RestaurantName
+                                    : item.ActivityName
+                            }</figcaption>
                             <figcaption class="location"><img src="./images/icon/spot16.svg" />${item.City}</figcaption>
                         </figure>
                     </a>
