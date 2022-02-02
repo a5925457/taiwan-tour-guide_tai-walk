@@ -34,24 +34,52 @@
             <nav aria-label="breadcrumb" class="breadcrumb container">
                 <ol>
                     <li><a href="index.html">首頁</a></li>
-                    <li id="currentType"><a href="event.html">節慶活動</a></li>
-                    <li id="currentCounty"></li>
-                    <li aria-current="page" id="current"></li>
+                    <li><a href="event.html">節慶活動</a></li>
+                    <li><a href="#">苗栗縣</a></li>
+                    <li aria-current="page">2021 苗栗龍系列活動</li>
                 </ol>
             </nav>
             <section class="slider">
                 <!-- Swiper -->
                 <div class="swiper bigSwiper">
-                    <div class="swiper-wrapper"></div>
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper1">
+                            <figure>
+                                <img src="./images/z_11003139.png" alt="" />
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="./images/z_11003139.png" alt="" />
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure>
+                                <img src="./images/z_11003139.png" alt="" />
+                            </figure>
+                        </div>
+                    </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
                 </div>
             </section>
             <section class="content container">
-                <div class="title"></div>
+                <div class="title">
+                    <h4>2021 苗栗龍系列活動</h4>
+                    <span># 節慶活動</span>
+                    <span># 藝文活動</span>
+                </div>
                 <div class="intro">
                     <h6>活動介紹：</h6>
-                    <p></p>
+                    <p>
+                        「火旁龍」就是苗栗行銷客家元宵節慶而迎龍的在地獨特民俗，亦是臺灣舞龍文化的代表。至1989年辦理迄今，獨特的客家苗栗火旁龍文化已成功吸引了全國民眾的目光，甚至引起國際注目，逐漸從早期的地方民俗活動，蛻變成為臺灣四大地方元宵節慶文化，而後成為「客庄十二節慶」元宵民俗活動。近年來，苗栗火旁龍活動已經成為展現客家龍文化的重要指標，以發展地方觀光旅遊，追求經濟發展，吸引觀光人潮，以龍文化造鎮與景點打造，行銷苗栗客家傳統龍文化。「苗栗火旁龍」系列活動依序期程，大抵可劃分為四大主題，分別為祥龍點睛˙舞龍競技、民俗踩街、火旁龍之夜、化龍返天暨客家特色商品展。每年的活動可謂推陳出新，目的都在於吸引遊客一同共襄盛舉。而近幾年為推展在地觀光國際化，並順應國際環境資源永續發展之潮流，「苗栗火旁龍」逐步朝向觀光化發展，並於民俗踩街及火旁龍之夜，邀請國內外的表演團體，連袂出席參與火旁龍年度盛事，精彩的表演、恍如置身國外嘉年華派對。活動日程
+                        110年2月19日-2月28日 客家龍神壇 地點：苗栗火車站西站廣場 110年2月20日 09:00-12:30
+                        祥龍點睛、神龍祈福及貓裏客家龍競技 (改線上直播) 地點：苗栗市玉清宮前廣場 110年2月26日
+                        18:00-22:00 民俗踩街 (停辦) 地點：苗栗市市區 110年2月27日 17:00-22:00 龍之夜 (停辦)
+                        地點：苗栗市經國路河濱公園 110年2月28日 21:00-24:00 化龍返天 (改線上直播)
+                        地點：苗栗市嘉盛五文昌廟※
+                        2021「龍之夜」活動受到疫情影響，將取消民俗踩街及龍之夜，詳情請參考苗栗火旁龍粉絲團公告。
+                    </p>
                 </div>
                 <div class="other-detail">
                     <div class="info">
@@ -79,7 +107,17 @@
                         </dl>
                     </div>
                     <div class="second">
-                        <div class="iframe-wrap"></div>
+                        <div class="iframe-wrap">
+                            <iframe
+                                width="100%"
+                                height="100%"
+                                frameborder="0"
+                                scrolling="no"
+                                marginheight="0"
+                                marginwidth="0"
+                                src="https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=25.175495147705078,121.53678894042969&z=16&output=embed&t="
+                            ></iframe>
+                        </div>
                         <div class="nearby">
                             <h6>周邊資訊：</h6>
                             <a href="#">
@@ -199,133 +237,18 @@
             let urlParams = new URLSearchParams(window.location.search);
             let type = urlParams.get('type');
             let id = urlParams.get('id');
-            let apiType = '';
-            let searchName = '';
-
-            // change search bar & breadcrumb
-            switch (type) {
-                case 'spot':
-                    document.querySelector('#currentType').innerHTML = '<li><a href="spot.html">探索景點</a></li>';
-                    apiType = 'ScenicSpot';
-                    searchName = 'ScenicSpotName';
-                    break;
-                case 'res':
-                    document.querySelector('#currentType').innerHTML = '<li><a href="res.html">品嚐美食</a></li>';
-                    apiType = 'Restaurant';
-                    searchName = 'RestaurantName';
-                    break;
-                case 'event':
-                    apiType = 'Activity';
-                    searchName = 'ActivityName';
-                    break;
-                default:
-            }
 
             const getData = async () => {
                 const res = await fetch(
                     `https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity?%24filter=contains(ActivityID, '${id}')&%24top=30&%24format=JSON`
                 );
                 const data = await res.json();
-
-                document.querySelector('#currentCounty').innerHTML = `<a href="#">${data[0].City}</a>`;
-
-                renderImage(...data);
-                renderTitle(...data);
-                renderIntro(...data);
-                renderInfo(...data);
-                renderMap(...data);
                 console.log(data);
             };
 
             getData();
 
-            function renderImage(data) {
-                if (data.Picture.PictureUrl1) {
-                    document.querySelector('.bigSwiper').querySelector('.swiper-wrapper').innerHTML += `
-                        <a class="swiper-slide" href="#" style="background: url(${
-                            data.Picture.PictureUrl1 ? data.Picture.PictureUrl1 : './images/NoImage-1100x400.svg'
-                        }) no-repeat center center; background-size: cover">
-                        </a>
-                        `;
-                }
-                if (data.Picture.PictureUrl2) {
-                    document.querySelector('.bigSwiper').querySelector('.swiper-wrapper').innerHTML += `
-                        <a class="swiper-slide" href="#" style="background: url(${
-                            data.Picture.PictureUrl2 ? data.Picture.PictureUrl2 : './images/NoImage-1100x400.svg'
-                        }) no-repeat center center; background-size: cover">
-                        </a>
-                        `;
-                }
-                if (data.Picture.PictureUrl3) {
-                    document.querySelector('.bigSwiper').querySelector('.swiper-wrapper').innerHTML += `
-                        <a class="swiper-slide" href="#" style="background: url(${
-                            data.Picture.PictureUrl3 ? data.Picture.PictureUrl3 : './images/NoImage-1100x400.svg'
-                        }) no-repeat center center; background-size: cover">
-                        </a>
-                        `;
-                }
-            }
-
-            function renderTitle(data) {
-                document.querySelector('#current').innerText = data.ActivityName;
-                document.querySelector('.title').innerHTML = `
-                <h4>${data.ActivityName}</h4>
-                `;
-                if (data.Class1) {
-                    document.querySelector('.title').innerHTML += `
-                <span># ${data.Class1}</span>
-                `;
-                }
-                if (data.Class2) {
-                    document.querySelector('.title').innerHTML += `
-                <span># ${data.Class2}</span>
-                `;
-                }
-            }
-
-            function renderIntro(data) {
-                document.querySelector('.intro').querySelector('p').innerText = data.Description;
-            }
-
-            function renderInfo(data) {
-                document.querySelector('.info').innerHTML = `
-                <dl>
-                            <dt>活動時間：</dt>
-                            <dd>${data.StartTime} - ${data.EndTime}</dd>
-                            <br />
-                            <dt>聯絡電話：</dt>
-                            <dd>11</dd>
-                            <br />
-                            <dt>主辦單位：</dt>
-                            <dd>${data.Organizer}</dd>
-                            <br />
-                            <dt>活動地點：</dt>
-                            <dd>${data.Address}</dd>
-                            <br />
-                            <dt>官方網站：</dt>
-                            <dd><a target="_blank" href=${data.WebsiteUrl}>${data.WebsiteUrl}</a></dd>
-                            <br />
-                            <dt>活動費用：</dt>
-                            <dd>免費。</dd>
-                            <br />
-                            <dt>注意事項：</dt>
-                            <dd>小心火燭</dd>
-                        </dl>
-                `;
-            }
-
-            function renderMap(data) {
-                document.querySelector('.iframe-wrap').innerHTML = `
-                <iframe width="100%"
-                        height="100%"
-                        frameborder="0"
-                        scrolling="no"
-                        marginheight="0"
-                        marginwidth="0"
-                        src="https://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=${data.Position.PositionLat},${data.Position.PositionLon}&z=16&output=embed&t="
-                       ></iframe>
-                `;
-            }
+            function render(data) {}
         </script>
 
         <!-- Swiper JS -->

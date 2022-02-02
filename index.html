@@ -135,7 +135,7 @@
                 .then((data) => {
                     data.forEach((item) => {
                         document.querySelector('.event').querySelector('.list').innerHTML += `
-                        <a href="#" class="event-card">
+                        <a href="detail.html?type=event&id=${item.ActivityID}" class="event-card">
                         <div class="img-wrap">
                             <img src="${
                                 item.Picture.PictureUrl1 ? item.Picture.PictureUrl1 : './images/NoImage-255x200.svg'
