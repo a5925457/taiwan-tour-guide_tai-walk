@@ -721,6 +721,9 @@ section.spot .top a:link, section.spot .top a:visited {
 }
 
 .slider-spot .swiper-slide figure figcaption.name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.03em;
@@ -922,6 +925,9 @@ section.res .top a:link, section.res .top a:visited {
 }
 
 .slider-res .swiper-slide figure figcaption.name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.03em;

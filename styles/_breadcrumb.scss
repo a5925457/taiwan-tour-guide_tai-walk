@@ -1,11 +1,11 @@
 nav.breadcrumb {
     margin-top: 0;
     justify-content: flex-start;
-
 }
 
 nav.breadcrumb ol {
     display: flex;
+    flex-wrap: wrap;
     padding: 0;
     font-size: 12px;
     line-height: 21px;
@@ -16,8 +16,9 @@ nav.breadcrumb ol {
         margin-left: 4px;
         margin-right: 4px;
     }
-    a:link,a:visited {
-        color: #6E7D60;
+    a:link,
+    a:visited {
+        color: #6e7d60;
     }
 }
 

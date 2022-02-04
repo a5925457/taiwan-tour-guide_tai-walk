@@ -155,6 +155,8 @@ nav.breadcrumb ol {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding: 0;
   font-size: 12px;
   line-height: 21px;
@@ -168,8 +170,9 @@ nav.breadcrumb ol li a::after {
   margin-right: 4px;
 }
 
-nav.breadcrumb ol a:link, nav.breadcrumb ol a:visited {
-  color: #6E7D60;
+nav.breadcrumb ol a:link,
+nav.breadcrumb ol a:visited {
+  color: #6e7d60;
 }
 
 @media (min-width: 768px) {
@@ -619,6 +622,9 @@ section.spot .top a:link, section.spot .top a:visited {
 }
 
 .slider-spot .swiper-slide figure figcaption.name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-weight: 700;
   font-size: 18px;
   letter-spacing: 0.03em;

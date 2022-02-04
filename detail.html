@@ -553,17 +553,14 @@
 
             const others = async () => {
                 if (type == 'spot') {
-                    document.querySelector('.spot').querySelector('.top').querySelector('h4').innerText += '的景點';
                     document.querySelector('.spot').querySelector('.top').innerHTML += `
                     <a href="spot.html">查看更多景點<img src="./images/icon/arrow-right16_R.svg" /></a>
                     `;
                 } else if (type == 'res') {
-                    document.querySelector('.spot').querySelector('.top').querySelector('h4').innerText += '的餐廳';
                     document.querySelector('.spot').querySelector('.top').innerHTML += `
                     <a href="res.html">查看更多餐廳<img src="./images/icon/arrow-right16_R.svg" /></a>
                     `;
                 } else {
-                    document.querySelector('.spot').querySelector('.top').querySelector('h4').innerText += '的活動';
                     document.querySelector('.spot').querySelector('.top').innerHTML += `
                     <a href="event.html">查看更多活動<img src="./images/icon/arrow-right16_R.svg" /></a>
                     `;
