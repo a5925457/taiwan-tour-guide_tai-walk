@@ -12,3 +12,10 @@ menuButton.addEventListener('click', () => {
         isOpen = false;
     }
 });
+document.querySelector('.bg').addEventListener('click', () => {
+    if (isOpen) {
+        moblieMenu.classList.add('hidden');
+        menuButton.querySelector('img').setAttribute('src', './images/icon/hamburger.svg');
+        isOpen = false;
+    }
+});

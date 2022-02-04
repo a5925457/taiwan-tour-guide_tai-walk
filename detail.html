@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>台灣走走 - 台灣旅遊景點導覽</title>
+        <link rel="icon" href="./images/icon/Logo-icon.svg" sizes="any" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -50,45 +51,24 @@
             <section class="content container">
                 <div class="title"></div>
                 <div class="intro">
-                    <h6>活動介紹：</h6>
+                    <h6></h6>
                     <p></p>
                 </div>
                 <div class="other-detail">
                     <div class="info">
-                        <dl>
-                            <dt>活動時間：</dt>
-                            <dd>2021/02/19 00:00 - 2021/02/28 00:00</dd>
-                            <br />
-                            <dt>聯絡電話：</dt>
-                            <dd>886-3-9545114</dd>
-                            <br />
-                            <dt>主辦單位：</dt>
-                            <dd>苗栗市公所、苗栗市民代表會</dd>
-                            <br />
-                            <dt>活動地點：</dt>
-                            <dd>苗栗火車站西站廣場</dd>
-                            <br />
-                            <dt>官方網站：</dt>
-                            <dd>http://www.art-fruit.com.tw/2021/index.html</dd>
-                            <br />
-                            <dt>活動費用：</dt>
-                            <dd>免費。</dd>
-                            <br />
-                            <dt>注意事項：</dt>
-                            <dd>小心火燭</dd>
-                        </dl>
+                        <dl></dl>
                     </div>
                     <div class="second">
                         <div class="iframe-wrap"></div>
                         <div class="nearby">
                             <h6>周邊資訊：</h6>
-                            <a href="#">
+                            <a id="nearbySpot" href="#">
                                 <p class="text-center">附近景點</p>
                             </a>
-                            <a href="#">
+                            <a id="nearbyEvent" href="#">
                                 <p class="text-center">附近活動</p>
                             </a>
-                            <a href="#">
+                            <a id="nearbyRes" href="#">
                                 <p class="text-center">附近美食</p>
                             </a>
                         </div>
@@ -98,81 +78,14 @@
             <section class="spot container">
                 <div class="top">
                     <h4>還有這些不能錯過</h4>
-                    <a href="#">查看更多活動<img src="./images/icon/arrow-right16_R.svg" /></a>
                 </div>
                 <div class="slider-spot mobile">
                     <!-- Swiper -->
                     <div class="swiper swiper2">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img src="./images/z_11003139.png" alt="" />
-                                    <figcaption class="name">龜山島牛奶海</figcaption>
-                                    <figcaption class="location">
-                                        <img src="./images/icon/spot16.svg" />宜蘭縣
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img src="./images/z_11003139.png" alt="" />
-                                    <figcaption class="name">龜山島牛奶海</figcaption>
-                                    <figcaption class="location">
-                                        <img src="./images/icon/spot16.svg" />宜蘭縣
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img src="./images/z_11003139.png" alt="" />
-                                    <figcaption class="name">龜山島牛奶海</figcaption>
-                                    <figcaption class="location">
-                                        <img src="./images/icon/spot16.svg" />宜蘭縣
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="swiper-slide">
-                                <figure>
-                                    <img src="./images/z_11003139.png" alt="" />
-                                    <figcaption class="name">龜山島牛奶海</figcaption>
-                                    <figcaption class="location">
-                                        <img src="./images/icon/spot16.svg" />宜蘭縣
-                                    </figcaption>
-                                </figure>
-                            </div>
-                        </div>
+                        <div class="swiper-wrapper"></div>
                     </div>
                 </div>
-                <div class="list hidden">
-                    <div class="spot-card">
-                        <figure>
-                            <div class="img-wrap"><img src="./images/z_11003139.png" alt="" /></div>
-                            <figcaption class="name">龜山島牛奶海</figcaption>
-                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
-                        </figure>
-                    </div>
-                    <div class="spot-card">
-                        <figure>
-                            <div class="img-wrap"><img src="./images/z_11003139.png" alt="" /></div>
-                            <figcaption class="name">龜山島牛奶海</figcaption>
-                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
-                        </figure>
-                    </div>
-                    <div class="spot-card">
-                        <figure>
-                            <div class="img-wrap"><img src="./images/z_11003139.png" alt="" /></div>
-                            <figcaption class="name">龜山島牛奶海</figcaption>
-                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
-                        </figure>
-                    </div>
-                    <div class="spot-card">
-                        <figure>
-                            <div class="img-wrap"><img src="./images/z_11003139.png" alt="" /></div>
-                            <figcaption class="name">龜山島牛奶海</figcaption>
-                            <figcaption class="location"><img src="./images/icon/spot16.svg" />宜蘭縣</figcaption>
-                        </figure>
-                    </div>
-                </div>
+                <div class="list hidden"></div>
             </section>
         </main>
         <footer>
@@ -210,43 +123,42 @@
             let id = urlParams.get('id');
             let apiType = '';
             let searchName = '';
+            let county = '';
 
             // change search bar & breadcrumb
             switch (type) {
                 case 'spot':
                     document.querySelector('#currentType').innerHTML = '<li><a href="spot.html">探索景點</a></li>';
                     apiType = 'ScenicSpot';
-                    searchName = 'ScenicSpotName';
+                    searchName = 'ScenicSpotID';
                     break;
                 case 'res':
                     document.querySelector('#currentType').innerHTML = '<li><a href="res.html">品嚐美食</a></li>';
                     apiType = 'Restaurant';
-                    searchName = 'RestaurantName';
+                    searchName = 'RestaurantID';
                     break;
                 case 'event':
                     apiType = 'Activity';
-                    searchName = 'ActivityName';
+                    searchName = 'ActivityID';
                     break;
                 default:
             }
 
             const getData = async () => {
                 const res = await fetch(
-                    `https://ptx.transportdata.tw/MOTC/v2/Tourism/Activity?%24filter=contains(ActivityID, '${id}')&%24top=30&%24format=JSON/`,
+                    `https://ptx.transportdata.tw/MOTC/v2/Tourism/${apiType}?%24filter=contains(${searchName}, '${id}')&%24top=30&%24format=JSON/`,
                     {
                         headers: getAuthorizationHeader(),
                     }
                 );
                 const data = await res.json();
-
-                document.querySelector('#currentCounty').innerHTML = `<a href="#">${data[0].City}</a>`;
-
+                changeCurrentCounty(...data);
                 renderImage(...data);
                 renderTitle(...data);
                 renderIntro(...data);
                 renderInfo(...data);
                 renderMap(...data);
-                console.log(data);
+                nearby();
             };
 
             // API key
@@ -265,38 +177,197 @@
 
             getData();
 
+            function changeCurrentCounty(data) {
+                switch (data.City || data.Location.slice(0, 3)) {
+                    case '臺北市':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=Taipei&q=&type=${type}">臺北市</a>`;
+                        county = 'Taipei';
+                        break;
+                    case '新北市':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=NewTaipei&q=&type=${type}">新北市</a>`;
+                        county = 'NewTaipei';
+                        break;
+                    case '基隆市':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=Keelung&q=&type=${type}">基隆市</a>`;
+                        county = 'Keelung';
+                        break;
+                    case '宜蘭縣':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=YilanCounty&q=&type=${type}">宜蘭縣</a>`;
+                        county = 'YilanCounty';
+                        break;
+                    case '桃園市':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=Taoyuan&q=&type=${type}">桃園市</a>`;
+                        county = 'Taoyuan';
+                        break;
+                    case '新竹縣':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=HsinchuCounty&q=&type=${type}">新竹縣</a>`;
+                        county = 'HsinchuCounty';
+                        break;
+                    case '新竹市':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=Hsinchu&q=&type=${type}">新竹市</a>`;
+                        county = 'Hsinchu';
+                        break;
+                    case '苗栗縣':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=MiaoliCounty&q=&type=${type}">苗栗縣</a>`;
+                        county = 'MiaoliCounty';
+                        break;
+                    case '臺中市':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=Taichung&q=&type=${type}">臺中市</a>`;
+                        county = 'Taichung';
+                        break;
+                    case '彰化縣':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=ChanghuaCounty&q=&type=${type}">彰化縣</a>`;
+                        county = 'ChanghuaCounty';
+                        break;
+                    case '南投縣':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=NantouCounty&q=&type=${type}">南投縣</a>`;
+                        county = 'NantouCounty';
+                        break;
+                    case '雲林縣':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=YunlinCounty&q=&type=${type}">雲林縣</a>`;
+                        county = 'YunlinCounty';
+                        break;
+                    case '嘉義縣':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=ChiayiCounty&q=&type=${type}">嘉義縣</a>`;
+                        county = 'ChiayiCounty';
+                        break;
+                    case '嘉義市':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=Chiayi&q=&type=${type}#">嘉義市</a>`;
+                        county = 'Chiayi';
+                        break;
+                    case '臺南市':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=Tainan&q=&type=${type}">臺南市</a>`;
+                        county = 'Tainan';
+                        break;
+                    case '高雄市':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=Kaohsiung&q=&type=${type}">高雄市</a>`;
+                        county = 'Kaohsiung';
+                        break;
+                    case '屏東縣':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=PingtungCounty&q=&type=${type}">屏東縣</a>`;
+                        county = 'PingtungCounty';
+                        break;
+                    case '花蓮縣':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=HualienCounty&q=&type=${type}">花蓮縣</a>`;
+                        county = 'HualienCounty';
+                        break;
+                    case '臺東縣':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=TaitungCounty&q=&type=${type}">臺東縣</a>`;
+                        county = 'TaitungCounty';
+                        break;
+                    case '澎湖縣':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=PenghuCounty&q=&type=${type}">澎湖縣</a>`;
+                        county = 'PenghuCounty';
+                        break;
+                    case '金門縣':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=KinmenCounty&q=&type=${type}">金門縣</a>`;
+                        county = 'KinmenCounty';
+                        break;
+                    case '連江縣':
+                        document.querySelector(
+                            '#currentCounty'
+                        ).innerHTML = `<a href="search.html?city=LienchiangCounty&q=&type=${type}">連江縣</a>`;
+                        county = 'LienchiangCounty';
+                        break;
+                }
+            }
+
             function renderImage(data) {
                 if (data.Picture.PictureUrl1) {
                     document.querySelector('.bigSwiper').querySelector('.swiper-wrapper').innerHTML += `
-                        <a class="swiper-slide" href="#" style="background: url(${
+                        <div class="swiper-slide" style="background: url(${
                             data.Picture.PictureUrl1 ? data.Picture.PictureUrl1 : './images/NoImage-1100x400.svg'
                         }) no-repeat center center; background-size: cover">
-                        </a>
+                        </div>
+                        `;
+                } else {
+                    document.querySelector('.bigSwiper').querySelector('.swiper-wrapper').innerHTML += `
+                        <div class="swiper-slide" style="background: url('./images/NoImage-1100x400.svg') no-repeat center center; background-size: cover">
+                        </div>
                         `;
                 }
                 if (data.Picture.PictureUrl2) {
                     document.querySelector('.bigSwiper').querySelector('.swiper-wrapper').innerHTML += `
-                        <a class="swiper-slide" href="#" style="background: url(${
+                        <div class="swiper-slide" style="background: url(${
                             data.Picture.PictureUrl2 ? data.Picture.PictureUrl2 : './images/NoImage-1100x400.svg'
                         }) no-repeat center center; background-size: cover">
-                        </a>
+                        </div>
                         `;
                 }
                 if (data.Picture.PictureUrl3) {
                     document.querySelector('.bigSwiper').querySelector('.swiper-wrapper').innerHTML += `
-                        <a class="swiper-slide" href="#" style="background: url(${
+                        <div class="swiper-slide" style="background: url(${
                             data.Picture.PictureUrl3 ? data.Picture.PictureUrl3 : './images/NoImage-1100x400.svg'
                         }) no-repeat center center; background-size: cover">
-                        </a>
+                        </div>
                         `;
                 }
             }
 
             function renderTitle(data) {
-                document.querySelector('#current').innerText = data.ActivityName;
-                document.querySelector('.title').innerHTML = `
+                if (type == 'spot') {
+                    document.title = `台灣走走 - ${data.ScenicSpotName}`;
+                    document.querySelector('#current').innerText = data.ScenicSpotName;
+                    document.querySelector('.title').innerHTML = `
+                <h4>${data.ScenicSpotName}</h4>
+                `;
+                }
+                if (type == 'res') {
+                    document.title = `台灣走走 - ${data.RestaurantName}`;
+                    document.querySelector('#current').innerText = data.RestaurantName;
+                    document.querySelector('.title').innerHTML = `
+                <h4>${data.RestaurantName}</h4>
+                `;
+                }
+                if (type == 'event') {
+                    document.title = `台灣走走 - ${data.ActivityName}`;
+                    document.querySelector('#current').innerText = data.ActivityName;
+                    document.querySelector('.title').innerHTML = `
                 <h4>${data.ActivityName}</h4>
                 `;
+                }
                 if (data.Class1) {
                     document.querySelector('.title').innerHTML += `
                 <span># ${data.Class1}</span>
@@ -307,37 +378,158 @@
                 <span># ${data.Class2}</span>
                 `;
                 }
+                if (data.Class3) {
+                    document.querySelector('.title').innerHTML += `
+                <span># ${data.Class3}</span>
+                `;
+                }
+                if (data.Class) {
+                    document.querySelector('.title').innerHTML += `
+                <span># ${data.Class}</span>
+                `;
+                }
             }
 
             function renderIntro(data) {
-                document.querySelector('.intro').querySelector('p').innerText = data.Description;
+                if (type == 'spot') {
+                    document.querySelector('.intro').querySelector('h6').innerText = '景點介紹：';
+                } else if (type == 'res') {
+                    document.querySelector('.intro').querySelector('h6').innerText = '餐廳介紹：';
+                } else {
+                    document.querySelector('.intro').querySelector('h6').innerText = '活動介紹：';
+                }
+                document.querySelector('.intro').querySelector('p').innerText =
+                    data.DescriptionDetail || data.Description;
             }
 
             function renderInfo(data) {
-                document.querySelector('.info').innerHTML = `
-                <dl>
-                            <dt>活動時間：</dt>
-                            <dd>${data.StartTime} - ${data.EndTime}</dd>
+                if (type == 'spot') {
+                    if (data.OpenTime) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                            <dt>開放時間：</dt>
+                            <dd>${data.OpenTime}</dd>
                             <br />
-                            <dt>聯絡電話：</dt>
-                            <dd>11</dd>
+                `;
+                    }
+                    if (data.Phone) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                            <dt>服務電話：</dt>
+                            <dd>${data.Phone}</dd>
                             <br />
-                            <dt>主辦單位：</dt>
-                            <dd>${data.Organizer}</dd>
-                            <br />
-                            <dt>活動地點：</dt>
+                `;
+                    }
+                    if (data.Address) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                            <dt>景點地址：</dt>
                             <dd>${data.Address}</dd>
                             <br />
-                            <dt>官方網站：</dt>
+                `;
+                    }
+                    if (data.WebsiteUrl) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                        <dt>官方網站：</dt>
                             <dd><a target="_blank" href=${data.WebsiteUrl}>${data.WebsiteUrl}</a></dd>
                             <br />
-                            <dt>活動費用：</dt>
-                            <dd>免費。</dd>
-                            <br />
-                            <dt>注意事項：</dt>
-                            <dd>小心火燭</dd>
-                        </dl>
                 `;
+                    }
+                    if (data.TicketInfo) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                            <dt>票價資訊：</dt>
+                            <dd>${data.TicketInfo}</dd>
+                            <br />
+                `;
+                    }
+                    if (data.Remarks) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                            <dt>注意事項：</dt>
+                            <dd>${data.Remarks}</dd>
+                            <br />
+                `;
+                    }
+                }
+                if (type == 'res') {
+                    if (data.OpenTime) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                            <dt>營業時間：</dt>
+                            <dd>${data.OpenTime}</dd>
+                            <br />
+                `;
+                    }
+                    if (data.Phone) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                            <dt>聯絡電話：</dt>
+                            <dd>${data.Phone}</dd>
+                            <br />
+                `;
+                    }
+                    if (data.Address) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                            <dt>餐廳地址：</dt>
+                            <dd>${data.Address}</dd>
+                            <br />
+                `;
+                    }
+                    if (data.WebsiteUrl) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                        <dt>官方網站：</dt>
+                            <dd><a target="_blank" href=${data.WebsiteUrl}>${data.WebsiteUrl}</a></dd>
+                            <br />
+                `;
+                    }
+                }
+                if (type == 'event') {
+                    if (data.StartTime && data.EndTime) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                            <dt>活動時間：</dt>
+                            <dd>${invertTimeFormat(data.StartTime)} - ${invertTimeFormat(data.EndTime)}</dd>
+                            <br />
+                `;
+                    }
+                    if (data.Phone) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                    <dt>聯絡電話：</dt>
+                            <dd>${data.Phone}</dd>
+                            <br />
+                    `;
+                    }
+                    if (data.Organizer) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                <dt>主辦單位：</dt>
+                            <dd>${data.Organizer}</dd>
+                            <br />
+                `;
+                    }
+                    if (data.Address) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                <dt>活動地點：</dt>
+                            <dd>${data.Address}</dd>
+                            <br />
+                `;
+                    }
+                    if (data.WebsiteUrl) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                <dt>官方網站：</dt>
+                            <dd><a target="_blank" href=${data.WebsiteUrl}>${data.WebsiteUrl}</a></dd>
+                            <br />
+                `;
+                    }
+                    if (data.Charge) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                <dt>活動費用：</dt>
+                            <dd>${data.Charge}</dd>
+                            <br />
+                `;
+                    }
+                    if (data.Remarks) {
+                        document.querySelector('.info').querySelector('dl').innerHTML += `
+                <dt>注意事項：</dt>
+                            <dd>${data.Remarks}</dd>`;
+                    }
+                }
+            }
+
+            function invertTimeFormat(time) {
+                return time.slice(0, 16).split('T').join(' ');
             }
 
             function renderMap(data) {
@@ -352,6 +544,105 @@
                        ></iframe>
                 `;
             }
+
+            function nearby() {
+                document.querySelector('#nearbySpot').href = `search.html?city=${county}&q=&type=spot`;
+                document.querySelector('#nearbyEvent').href = `search.html?city=${county}&q=&type=event`;
+                document.querySelector('#nearbyRes').href = `search.html?city=${county}&q=&type=res`;
+            }
+
+            const others = async () => {
+                if (type == 'spot') {
+                    document.querySelector('.spot').querySelector('.top').querySelector('h4').innerText += '的景點';
+                    document.querySelector('.spot').querySelector('.top').innerHTML += `
+                    <a href="spot.html">查看更多景點<img src="./images/icon/arrow-right16_R.svg" /></a>
+                    `;
+                } else if (type == 'res') {
+                    document.querySelector('.spot').querySelector('.top').querySelector('h4').innerText += '的餐廳';
+                    document.querySelector('.spot').querySelector('.top').innerHTML += `
+                    <a href="res.html">查看更多餐廳<img src="./images/icon/arrow-right16_R.svg" /></a>
+                    `;
+                } else {
+                    document.querySelector('.spot').querySelector('.top').querySelector('h4').innerText += '的活動';
+                    document.querySelector('.spot').querySelector('.top').innerHTML += `
+                    <a href="event.html">查看更多活動<img src="./images/icon/arrow-right16_R.svg" /></a>
+                    `;
+                }
+                const res = await fetch(
+                    `https://ptx.transportdata.tw/MOTC/v2/Tourism/${apiType}?%24top=80&%24format=JSON/`,
+                    {
+                        headers: getAuthorizationHeader(),
+                    }
+                );
+                let data = await res.json();
+                if (type == 'spot') {
+                    data = data.filter((item) => {
+                        return item.ScenicSpotID != id;
+                    });
+                } else if (type == 'res') {
+                    data = data.filter((item) => {
+                        return item.RestaurantID != id;
+                    });
+                } else {
+                    data = data.filter((item) => {
+                        return item.ActivityID != id;
+                    });
+                }
+                data = data.filter((item) => {
+                    if (item.City) return item;
+                });
+                data.sort(() => Math.random() - 0.5);
+                data.slice(0, 4).forEach((item) => {
+                    document.querySelector('.slider-spot').querySelector('.swiper-wrapper').innerHTML += `
+                        <a class="swiper-slide" href="detail.html?type=${type}&id=${
+                        type == 'spot' ? item.ScenicSpotID : type == 'res' ? item.RestaurantID : item.ActivityID
+                    }">
+                                <figure>
+                                    <img src="${
+                                        item.Picture.PictureUrl1
+                                            ? item.Picture.PictureUrl1
+                                            : './images/NoImage-255x200.svg'
+                                    }" alt="${
+                        item.Picture.PictureDescription1 ? item.Picture.PictureDescription1 : ''
+                    }" />
+                                    <figcaption class="name">${
+                                        type == 'spot'
+                                            ? item.ScenicSpotName
+                                            : type == 'res'
+                                            ? item.RestaurantName
+                                            : item.ActivityName
+                                    }</figcaption>
+                                    <figcaption class="location">
+                                        <img src="./images/icon/spot16.svg" />${item.City}
+                                    </figcaption>
+                                </figure>
+                            </a>
+                    `;
+                    document.querySelector('.spot').querySelector('.list.hidden').innerHTML += `
+                            <a class="spot-card" href="detail.html?type=${type}&id=${
+                        type == 'spot' ? item.ScenicSpotID : type == 'res' ? item.RestaurantID : item.ActivityID
+                    }">
+                        <figure>
+                            <div class="img-wrap"><img src="${
+                                item.Picture.PictureUrl1 ? item.Picture.PictureUrl1 : './images/NoImage-255x200.svg'
+                            }" alt="${
+                        item.Picture.PictureDescription1 ? item.Picture.PictureDescription1 : ''
+                    }" /></div>
+                            <figcaption class="name">${
+                                type == 'spot'
+                                    ? item.ScenicSpotName
+                                    : type == 'res'
+                                    ? item.RestaurantName
+                                    : item.ActivityName
+                            }</figcaption>
+                            <figcaption class="location"><img src="./images/icon/spot16.svg" />${item.City}</figcaption>
+                        </figure>
+                    </a>
+                        `;
+                });
+            };
+
+            others();
         </script>
 
         <!-- Swiper JS -->

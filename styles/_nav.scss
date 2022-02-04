@@ -57,8 +57,13 @@ header {
             li {
                 a:link,
                 a:visited {
+                    transition: 0.4s;
                     color: $gray;
                     padding: 0 10px;
+                }
+                a:hover {
+                    color: $themeColor;
+                    box-shadow: 0px 3px 0 0px $yellow;
                 }
             }
         }

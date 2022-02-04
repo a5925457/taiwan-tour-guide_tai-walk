@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>台灣走走 - 節慶活動</title>
+        <link rel="icon" href="./images/icon/Logo-icon.svg" sizes="any" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -120,6 +121,7 @@
             let urlParams = new URLSearchParams(window.location.search);
             let q = urlParams.get('q');
             let type = urlParams.get('type');
+            let cat = urlParams.get('cat') ? urlParams.get('cat') : '';
             let city = urlParams.get('city') ? urlParams.get('city') : '';
             let date = urlParams.get('date') ? new Date(urlParams.get('date')) : '';
 
@@ -132,6 +134,7 @@
             // change search bar & breadcrumb
             switch (type) {
                 case 'spot':
+                    document.title = `台灣走走 - 探索景點`;
                     document.querySelector('.search').querySelector('.date').remove();
                     document.querySelector('#keyword').placeholder = '你想去哪裡？請輸入關鍵字';
                     document.querySelector('#type').value = 'spot';
@@ -140,6 +143,7 @@
                     searchName = 'ScenicSpotName';
                     break;
                 case 'res':
+                    document.title = `台灣走走 - 品嚐美食`;
                     document.querySelector('.search').querySelector('.date').remove();
                     document.querySelector('#keyword').placeholder = '你想吃什麼？請輸入關鍵字';
                     document.querySelector('#type').value = 'res';
@@ -178,11 +182,11 @@
                         headers: getAuthorizationHeader(),
                     }
                 );
-                let data = await res.json();
+                let obj = await res.json();
 
                 // check date
-                if (date && data.length != 0) {
-                    data = data
+                if (date && obj.length != 0) {
+                    obj = obj
                         .filter((item) => {
                             let startDate = new Date(item.StartTime.slice(0, 10).toString());
                             return startDate < date;
@@ -192,6 +196,49 @@
                             return endDate > date;
                         });
                 }
+                // filter No City
+                obj = obj.filter((item) => {
+                    if (item.City) return item;
+                });
+
+                // filter cat
+                let data1 = [];
+                if (cat) {
+                    data1 = obj.filter((item) => {
+                        if (item.Class1 && item.Class1.includes(cat)) {
+                            return item;
+                        }
+                    });
+                }
+                let data2 = [];
+                if (cat) {
+                    data2 = obj.filter((item) => {
+                        if (item.Class2 && item.Class2.includes(cat)) {
+                            return item;
+                        }
+                    });
+                }
+                let data3 = [];
+                if (cat) {
+                    data3 = obj.filter((item) => {
+                        if (item.Class3 && item.Class3.includes(cat)) {
+                            return item;
+                        }
+                    });
+                }
+                let data4 = [];
+                if (cat) {
+                    data4 = obj.filter((item) => {
+                        if (item.Class && item.Class.includes(cat)) {
+                            return item;
+                        }
+                    });
+                }
+
+                const data =
+                    data1.concat(data2).concat(data3).concat(data4).length == 0
+                        ? obj
+                        : data1.concat(data2).concat(data3).concat(data4);
 
                 // total amount
                 document.querySelector('.result').querySelector('span').innerText = data.length;
@@ -231,7 +278,9 @@
             function render(data) {
                 data.forEach((item) => {
                     document.querySelector('.search-list').innerHTML += `
-                    <a class="result-event-card" href="#">
+                    <a class="result-event-card" href="detail.html?type=${type}&id=${
+                        type == 'spot' ? item.ScenicSpotID : type == 'res' ? item.RestaurantID : item.ActivityID
+                    }">
                         <figure>
                             <div class="img-wrap"><img src="${
                                 item.Picture.PictureUrl1 ? item.Picture.PictureUrl1 : './images/NoImage-345x160.svg'

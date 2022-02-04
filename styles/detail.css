@@ -129,8 +129,15 @@ header button:hover {
   }
   nav ul.desktop li a:link,
   nav ul.desktop li a:visited {
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
     color: #646464;
     padding: 0 10px;
+  }
+  nav ul.desktop li a:hover {
+    color: #7f977b;
+    -webkit-box-shadow: 0px 3px 0 0px #e0da48;
+            box-shadow: 0px 3px 0 0px #e0da48;
   }
   button#menu-toggle {
     display: none;
@@ -328,6 +335,16 @@ section.content .info dl dd {
   display: inline-block;
   font-size: 16px;
   margin-bottom: 8px;
+}
+
+section.content .info a:link,
+section.content .info a:visited {
+  color: #6e7d60;
+  text-decoration: underline;
+}
+
+section.content .info a:hover {
+  color: #7f977b;
 }
 
 section.content .second {

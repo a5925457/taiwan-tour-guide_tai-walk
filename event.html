@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>台灣走走 - 節慶活動</title>
+        <link rel="icon" href="./images/icon/Logo-icon.svg" sizes="any" type="image/svg+xml" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -65,7 +66,13 @@
                             <option value="KinmenCounty">金門縣</option>
                             <option value="LienchiangCounty">連江縣</option>
                         </select>
-                        <input class="date" type="text" placeholder="選擇日期" onfocus="(this.type='date')" />
+                        <input
+                            class="date"
+                            name="date"
+                            type="text"
+                            placeholder="選擇日期"
+                            onfocus="(this.type='date')"
+                        />
                         <input type="text" name="q" id="" placeholder="想找有趣的？請輸入關鍵字" />
                         <input type="text" name="type" style="display: none" value="event" />
                         <button type="submit" class="flex-center"><img src="./images/icon/search30.svg" />搜尋</button>
@@ -78,28 +85,24 @@
                 </div>
 
                 <div class="list">
-                    <a class="cat" href="#">
+                    <a class="cat" href="search.html?cat=節慶活動&type=event">
                         <img src="./images/event_cat1.jpg" alt="" />
                         <p>節慶活動</p>
                     </a>
-                    <a class="cat" href="#">
+                    <a class="cat" href="search.html?cat=自行車活動&type=event">
                         <img src="./images/event_cat2.jpg" alt="" />
                         <p>自行車活動</p>
                     </a>
-                    <a class="cat" href="#">
+                    <a class="cat" href="search.html?cat=遊憩活動&type=event">
                         <img src="./images/event_cat3.jpg" alt="" />
                         <p>遊憩活動</p>
                     </a>
-                    <a class="cat" href="#">
+                    <a class="cat" href="search.html?cat=年度活動&type=event">
                         <img src="./images/event_cat4.jpg" alt="" />
-                        <p>產業文化活動</p>
-                    </a>
-                    <a class="cat" href="#">
-                        <img src="./images/event_cat5.jpg" alt="" />
                         <p>年度活動</p>
                     </a>
-                    <a class="cat" href="#">
-                        <img src="./images/event_cat6.jpg" alt="" />
+                    <a class="cat" href="search.html?cat=四季活動&type=event">
+                        <img src="./images/event_cat5.jpg" alt="" />
                         <p>四季活動</p>
                     </a>
                 </div>

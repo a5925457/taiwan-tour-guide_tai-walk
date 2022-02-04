@@ -56,6 +56,14 @@ section.content {
                 margin-bottom: 8px;
             }
         }
+        a:link,
+        a:visited {
+            color: #6e7d60;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: $themeColor;
+        }
     }
     .second {
         background-color: #f9f9f9;
