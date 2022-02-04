@@ -15,7 +15,7 @@
   </p>
 </div>
 
-<!-- ABOUT THE PROJECT -->
+
 
 ## About The Project
 
@@ -36,7 +36,13 @@ Github: [https://github.com/a5925457](https://github.com/a5925457)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGMENTS -->
+## Design
+
+Designed by [Breakfast](https://www.figma.com/file/5HQAZ2bunGNKma2fwU0aNZ/The-F2E-3rd---Week1-%E5%8F%B0%E7%81%A3%E6%97%85%E9%81%8A%E6%99%AF%E9%BB%9E%E5%B0%8E%E8%A6%BD?node-id=5%3A1106)
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
+
 
 ## Acknowledgments
 
