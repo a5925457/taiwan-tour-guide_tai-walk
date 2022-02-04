@@ -107,6 +107,14 @@
             </div>
         </div>
 
+        <!-- jsSHA CDN -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.2.0/sha.js"
+            integrity="sha512-mvfoZwdzM8yPhlNxN1lU8S5wcfC5aPRCD3W0jsOeA+D75MMCrycxQqIvt6K7c5P7jItn7AXiAreuR+eockUHwQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
         <script>
             // get query string
             let urlParams = new URLSearchParams(window.location.search);
@@ -144,6 +152,9 @@
                     searchName = 'ActivityName';
                     break;
                 default:
+                    apiType = 'Activity';
+                    searchName = 'ActivityName';
+                    break;
             }
 
             // reserve the search data when refreshing page
@@ -161,8 +172,11 @@
                 const param = `%24filter=contains(${searchName}, '${q}')&`;
                 const res = await fetch(
                     `https://ptx.transportdata.tw/MOTC/v2/Tourism/${apiType}${city != '' ? '/' + city : ''}?${
-                        q !== '' ? param : ''
-                    }%24format=JSON`
+                        q ? param : ''
+                    }%24format=JSON`,
+                    {
+                        headers: getAuthorizationHeader(),
+                    }
                 );
                 let data = await res.json();
 
@@ -197,6 +211,20 @@
                     render(nowData);
                     nowPage++;
                 }
+            }
+
+            // API key
+            function getAuthorizationHeader() {
+                let AppID = '4130011dfd624eb5b17086040eb2d373';
+                let AppKey = 'ASYHFL004Xm1zWq2dfp32IPNwDA';
+                let GMTString = new Date().toGMTString();
+                let ShaObj = new jsSHA('SHA-1', 'TEXT');
+                ShaObj.setHMACKey(AppKey, 'TEXT');
+                ShaObj.update('x-date: ' + GMTString);
+                let HMAC = ShaObj.getHMAC('B64');
+                let Authorization =
+                    'hmac username="' + AppID + '", algorithm="hmac-sha1", headers="x-date", signature="' + HMAC + '"';
+                return { Authorization: Authorization, 'X-Date': GMTString };
             }
 
             // render
