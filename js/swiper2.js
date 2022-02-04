@@ -4,12 +4,6 @@ var swiper2 = new Swiper('.swiper2', {
     observer: true,
     observeParents: true,
 
-    // Install Plugin To Swiper
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-
     // Enable debugger
     debugger: true,
 });
